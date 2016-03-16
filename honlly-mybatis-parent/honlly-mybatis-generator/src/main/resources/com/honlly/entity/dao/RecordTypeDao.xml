@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.honlly.entity.dao.RecordTypeDao">
+	<select id="select" resultType="Map">
+		${sql}
+		<!-- SELECT table_name, column_name, column_type, is_nullable AS column_nullable, column_default, column_key, column_comment 
+		FROM information_schema.columns WHERE table_schema = database() ORDER BY table_name, ordinal_position -->
+	</select>
+</mapper>
