@@ -30,22 +30,13 @@
 	</bean>
 	<tx:annotation-driven transaction-manager="transactionManager" />
 
-	<bean id="sqlSessionFactory" class="com.honlly.SqlSessionFactoryBeanExtend" >
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean" >
 		<property name="dataSource" ref="dataSource" />
-		<property name="dialect" value="${db.dialect}" />
 	</bean>
 
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
 		<property name="basePackage" value="com.honlly.entity.dao" />
-	</bean>
-	
-	<aop:config>
-		<aop:advisor advice-ref="backIDInterceptor" pointcut="execution(* com.honlly.mybatis.EntityDao.save*(..))" />
-	</aop:config>
-	
-	<bean id="backIDInterceptor" class="com.honlly.mybatis.interceptor.BackIDInterceptor">
-		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
 	</bean>
 
 </beans>

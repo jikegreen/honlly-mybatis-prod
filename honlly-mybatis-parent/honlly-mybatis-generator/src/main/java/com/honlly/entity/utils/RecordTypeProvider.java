@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.ibatis.session.SqlSessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.util.LinkedCaseInsensitiveMap;
 
 import com.honlly.dialect.Dialect;
@@ -15,6 +17,7 @@ import com.honlly.entity.domain.RecordField;
 import com.honlly.entity.domain.RecordType;
 import com.honlly.factory.DaoFactory;
 
+@Component
 public class RecordTypeProvider {
 	
 	private Dialect dialect;
@@ -23,21 +26,11 @@ public class RecordTypeProvider {
 	/** 记录类型缓存 */
 	private final Map<String, RecordType> recordTypeCache = new LinkedCaseInsensitiveMap<RecordType>();
 	/** sqlSession工厂对象 */
+	@Autowired
 	private SqlSessionFactory sqlSessionFactory;
-
-	public RecordTypeProvider() {
-	}
-
-	public RecordTypeProvider(SqlSessionFactory sqlSessionFactory) {
-		this.sqlSessionFactory = sqlSessionFactory;
-	}
 
 	public SqlSessionFactory getSqlSessionFactory() {
 		return sqlSessionFactory;
-	}
-
-	public void setSqlSessionFactory(SqlSessionFactory sqlSessionFactory) {
-		this.sqlSessionFactory = sqlSessionFactory;
 	}
 
 	public List<String> getTableNames() {

@@ -37,7 +37,7 @@
 
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
-		<property name="basePackage" value="com.honlly.entity.dao,com.honlly.business.dao.mybatis" />
+		<property name="basePackage" value="com.honlly.business.dao.mybatis" />
 	</bean>
 	
 	<aop:config>
@@ -45,7 +45,7 @@
 	</aop:config>
 	
 	<bean id="backIDInterceptor" class="com.honlly.mybatis.interceptor.BackIDInterceptor">
-		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+		<!-- <property name="sqlSessionFactory" ref="sqlSessionFactory" /> -->
 	</bean>
 
 </beans>

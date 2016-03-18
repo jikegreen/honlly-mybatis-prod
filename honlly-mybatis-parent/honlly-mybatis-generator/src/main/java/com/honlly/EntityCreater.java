@@ -18,6 +18,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.honlly.commons.IdCol;
+import com.honlly.dialect.MySQLDialect;
+import com.honlly.dialect.OracleDialect;
 import com.honlly.entity.domain.Config;
 import com.honlly.entity.domain.RecordField;
 import com.honlly.entity.utils.DbFieldUtils;
@@ -63,7 +65,8 @@ public class EntityCreater implements InitializingBean {
 	@Autowired
 	protected Config config;
 	private final List<String> IGNORE_TABLE_PREFIX = new ArrayList<String>();
-	private String dialect;
+	/** 默认为mysql **/
+	private String dialect = "mysql";
 	
 
 	@Override
@@ -75,7 +78,14 @@ public class EntityCreater implements InitializingBean {
 				IGNORE_TABLE_PREFIX.add(elem);
 			}
 		}
-		dialect = ((SqlSessionFactoryBeanExtend)provider.getSqlSessionFactory()).getDialect();
+		dialect = provider.getSqlSessionFactory().getConfiguration().getEnvironment().getDataSource().getConnection().getMetaData().getDatabaseProductName();
+		if("oracle".equalsIgnoreCase(dialect)){
+			provider.setDialect(new OracleDialect());
+		}else if("mysql".equalsIgnoreCase(dialect)){
+			provider.setDialect(new MySQLDialect());
+		}else{
+			throw new RuntimeException("数据库:"+dialect+"，暂不支持！！！");
+		}
 	}
 
 	public void create() throws Exception {

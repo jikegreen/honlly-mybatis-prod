@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.DeleteProvider;
 import org.apache.ibatis.annotations.InsertProvider;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.ResultMap;
+import org.apache.ibatis.annotations.ResultType;
 import org.apache.ibatis.annotations.SelectProvider;
 import org.apache.ibatis.annotations.UpdateProvider;
 
@@ -24,6 +25,10 @@ public interface EntityDao<E extends Entity> {
 	String ENTITY_RESULT_MAP_ID = "entityResultMap";
 	/** 第一个参数名称 */
 	String FIRST_PARAM_NAME = "param1";
+	
+	@SelectProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.method_execute)
+	@ResultType(Map.class)
+	public List<Map<String, Object>> execute(String sql);
 
 	@SelectProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.method_getById)
 	@ResultMap(ENTITY_RESULT_MAP_ID)

@@ -1,477 +1,261 @@
-2015-09-10 10:39:56 888 INFO  [main] [TestContextManager:236] Could not instantiate TestExecutionListener class [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their dependencies) available.
-2015-09-10 10:39:57 225 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/basic-spring.xml]
-2015-09-10 10:39:57 629 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
-2015-09-10 10:39:57 766 INFO  [main] [GenericApplicationContext:513] Refreshing org.springframework.context.support.GenericApplicationContext@1ffe63b9: startup date [Thu Sep 10 10:39:57 CST 2015]; root of context hierarchy
-2015-09-10 10:39:57 931 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [system.properties]
-2015-09-10 10:39:57 940 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
-2015-09-10 10:39:59 098 INFO  [main] [ClassPathXmlApplicationContext:513] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1929425f: startup date [Thu Sep 10 10:39:59 CST 2015]; root of context hierarchy
-2015-09-10 10:39:59 100 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/basic-spring.xml]
-2015-09-10 10:39:59 151 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
-2015-09-10 10:39:59 210 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [system.properties]
-2015-09-10 10:39:59 213 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
-2015-09-10 10:40:00 998 DEBUG [main] [select:142] ==>  Preparing: SELECT SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL AS MAXID FROM DUAL 
-2015-09-10 10:40:01 231 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 10:40:01 458 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 10:40:01 507 DEBUG [main] [select:142] ==>  Preparing: SELECT SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL AS MAXID FROM DUAL 
-2015-09-10 10:40:01 508 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 10:40:01 528 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 10:40:01 529 DEBUG [main] [EntityDaoSqlProvider:334] INSERT INTO CUST_MESSAGE_WAIT_SEND(id, total_phone_number, mobile_phones, accept_time, checked, remark, source, send_num, content, status)  SELECT 286, #{param1[0].totalPhoneNumber,jdbcType=NUMERIC}, #{param1[0].mobilePhones,jdbcType=VARCHAR}, #{param1[0].acceptTime,jdbcType=DATE}, #{param1[0].checked,jdbcType=NUMERIC}, #{param1[0].remark,jdbcType=VARCHAR}, #{param1[0].source,jdbcType=VARCHAR}, #{param1[0].sendNum,jdbcType=NUMERIC}, #{param1[0].content,jdbcType=VARCHAR}, #{param1[0].status,jdbcType=INTEGER} FROM dual UNION ALL SELECT 287, #{param1[1].totalPhoneNumber,jdbcType=NUMERIC}, #{param1[1].mobilePhones,jdbcType=VARCHAR}, #{param1[1].acceptTime,jdbcType=DATE}, #{param1[1].checked,jdbcType=NUMERIC}, #{param1[1].remark,jdbcType=VARCHAR}, #{param1[1].source,jdbcType=VARCHAR}, #{param1[1].sendNum,jdbcType=NUMERIC}, #{param1[1].content,jdbcType=VARCHAR}, #{param1[1].status,jdbcType=INTEGER} FROM dual 
-2015-09-10 10:40:02 326 DEBUG [main] [saves:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(id, total_phone_number, mobile_phones, accept_time, checked, remark, source, send_num, content, status) SELECT 286, ?, ?, ?, ?, ?, ?, ?, ?, ? FROM dual UNION ALL SELECT 287, ?, ?, ?, ?, ?, ?, ?, ?, ? FROM dual 
-2015-09-10 10:40:02 343 DEBUG [main] [saves:142] ==> Parameters: null, 13646874892(String), null, null, null, nfsq(String), null, test2(String), null, null, 13646874892(String), null, null, null, nfsq(String), null, test1(String), null
-2015-09-10 10:40:02 357 DEBUG [main] [saves:142] <==    Updates: 2
-2015-09-10 10:40:02 362 DEBUG [main] [select:142] ==>  Preparing: SELECT 287 AS MAXID FROM DUAL 
-2015-09-10 10:40:02 363 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 10:40:02 367 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 10:40:02 370 INFO  [Thread-1] [GenericApplicationContext:873] Closing org.springframework.context.support.GenericApplicationContext@1ffe63b9: startup date [Thu Sep 10 10:39:57 CST 2015]; root of context hierarchy
-2015-09-10 10:43:13 771 INFO  [main] [TestContextManager:236] Could not instantiate TestExecutionListener class [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their dependencies) available.
-2015-09-10 10:43:14 001 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/basic-spring.xml]
-2015-09-10 10:43:14 322 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
-2015-09-10 10:43:14 410 INFO  [main] [GenericApplicationContext:513] Refreshing org.springframework.context.support.GenericApplicationContext@5dd6264: startup date [Thu Sep 10 10:43:14 CST 2015]; root of context hierarchy
-2015-09-10 10:43:14 576 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [system.properties]
-2015-09-10 10:43:14 582 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
-2015-09-10 10:43:15 592 INFO  [main] [ClassPathXmlApplicationContext:513] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6a078481: startup date [Thu Sep 10 10:43:15 CST 2015]; root of context hierarchy
-2015-09-10 10:43:15 594 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/basic-spring.xml]
-2015-09-10 10:43:15 641 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
-2015-09-10 10:43:15 701 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [system.properties]
-2015-09-10 10:43:15 704 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
-2015-09-10 10:43:16 912 DEBUG [main] [select:142] ==>  Preparing: SELECT SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL AS MAXID FROM DUAL 
-2015-09-10 10:43:17 153 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 10:43:17 279 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 10:43:17 294 DEBUG [main] [select:142] ==>  Preparing: SELECT SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL AS MAXID FROM DUAL 
-2015-09-10 10:43:17 296 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 10:43:17 304 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 10:43:17 305 DEBUG [main] [EntityDaoSqlProvider:334] INSERT INTO CUST_MESSAGE_WAIT_SEND(id, total_phone_number, mobile_phones, accept_time, checked, remark, source, send_num, content, status)  SELECT 288, #{param1[0].totalPhoneNumber,jdbcType=NUMERIC}, #{param1[0].mobilePhones,jdbcType=VARCHAR}, #{param1[0].acceptTime,jdbcType=DATE}, #{param1[0].checked,jdbcType=NUMERIC}, #{param1[0].remark,jdbcType=VARCHAR}, #{param1[0].source,jdbcType=VARCHAR}, #{param1[0].sendNum,jdbcType=NUMERIC}, #{param1[0].content,jdbcType=VARCHAR}, #{param1[0].status,jdbcType=INTEGER} FROM dual UNION ALL SELECT 289, #{param1[1].totalPhoneNumber,jdbcType=NUMERIC}, #{param1[1].mobilePhones,jdbcType=VARCHAR}, #{param1[1].acceptTime,jdbcType=DATE}, #{param1[1].checked,jdbcType=NUMERIC}, #{param1[1].remark,jdbcType=VARCHAR}, #{param1[1].source,jdbcType=VARCHAR}, #{param1[1].sendNum,jdbcType=NUMERIC}, #{param1[1].content,jdbcType=VARCHAR}, #{param1[1].status,jdbcType=INTEGER} FROM dual 
-2015-09-10 10:43:17 593 DEBUG [main] [saves:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(id, total_phone_number, mobile_phones, accept_time, checked, remark, source, send_num, content, status) SELECT 288, ?, ?, ?, ?, ?, ?, ?, ?, ? FROM dual UNION ALL SELECT 289, ?, ?, ?, ?, ?, ?, ?, ?, ? FROM dual 
-2015-09-10 10:43:17 609 DEBUG [main] [saves:142] ==> Parameters: null, 13646874892(String), null, null, null, nfsq(String), null, test2(String), null, null, 13646874892(String), null, null, null, nfsq(String), null, test1(String), null
-2015-09-10 10:43:17 651 DEBUG [main] [saves:142] <==    Updates: 2
-2015-09-10 10:43:17 662 DEBUG [main] [select:142] ==>  Preparing: SELECT 289 AS MAXID FROM DUAL 
-2015-09-10 10:43:17 663 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 10:43:17 669 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 10:43:17 673 INFO  [Thread-1] [GenericApplicationContext:873] Closing org.springframework.context.support.GenericApplicationContext@5dd6264: startup date [Thu Sep 10 10:43:14 CST 2015]; root of context hierarchy
-2015-09-10 10:52:54 454 INFO  [main] [TestContextManager:236] Could not instantiate TestExecutionListener class [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their dependencies) available.
-2015-09-10 10:52:54 699 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/basic-spring.xml]
-2015-09-10 10:52:55 077 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
-2015-09-10 10:52:55 165 INFO  [main] [GenericApplicationContext:513] Refreshing org.springframework.context.support.GenericApplicationContext@1ffe63b9: startup date [Thu Sep 10 10:52:55 CST 2015]; root of context hierarchy
-2015-09-10 10:52:55 317 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [system.properties]
-2015-09-10 10:52:55 325 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
-2015-09-10 10:52:56 247 INFO  [main] [ClassPathXmlApplicationContext:513] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6a078481: startup date [Thu Sep 10 10:52:56 CST 2015]; root of context hierarchy
-2015-09-10 10:52:56 249 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/basic-spring.xml]
-2015-09-10 10:52:56 317 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
-2015-09-10 10:52:56 384 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [system.properties]
-2015-09-10 10:52:56 387 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
-2015-09-10 10:52:56 476 DEBUG [main] [OracleSimpleSqlBuilder:60] INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(#{totalPhoneNumber,jdbcType=NUMERIC}, #{mobilePhones,jdbcType=VARCHAR}, #{acceptTime,jdbcType=DATE}, #{checked,jdbcType=NUMERIC}, #{remark,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, SEQ_CUST_MESSAGE_WAIT_SEND.nextval,#{sendNum,jdbcType=NUMERIC}, #{content,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER})
-2015-09-10 10:52:57 390 DEBUG [main] [save:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(?, ?, ?, ?, ?, ?, SEQ_CUST_MESSAGE_WAIT_SEND.nextval,?, ?, ?) 
-2015-09-10 10:52:57 629 DEBUG [main] [save:142] ==> Parameters: null, 13646874892(String), null, null, null, nfsq(String), null, test2(String), null
-2015-09-10 10:52:57 642 DEBUG [main] [save:142] <==    Updates: 1
-2015-09-10 10:52:57 705 DEBUG [main] [select:142] ==>  Preparing: SELECT null AS MAXID FROM DUAL 
-2015-09-10 10:52:57 708 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 10:52:57 848 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 10:52:57 857 DEBUG [main] [OracleSimpleSqlBuilder:60] INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(#{totalPhoneNumber,jdbcType=NUMERIC}, #{mobilePhones,jdbcType=VARCHAR}, #{acceptTime,jdbcType=DATE}, #{checked,jdbcType=NUMERIC}, #{remark,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, SEQ_CUST_MESSAGE_WAIT_SEND.nextval,#{sendNum,jdbcType=NUMERIC}, #{content,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER})
-2015-09-10 10:52:57 882 DEBUG [main] [saveOrUpdate:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(?, ?, ?, ?, ?, ?, SEQ_CUST_MESSAGE_WAIT_SEND.nextval,?, ?, ?) 
-2015-09-10 10:52:57 883 DEBUG [main] [saveOrUpdate:142] ==> Parameters: null, 13646874892(String), null, null, null, nfsq(String), null, test2forupdate(String), null
-2015-09-10 10:52:57 903 DEBUG [main] [saveOrUpdate:142] <==    Updates: 1
-2015-09-10 10:52:57 910 DEBUG [main] [select:142] ==>  Preparing: SELECT null AS MAXID FROM DUAL 
-2015-09-10 10:52:57 911 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 10:52:57 920 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 10:52:57 924 DEBUG [main] [OracleSimpleSqlBuilder:60] INSERT INTO CUST_MESSAGE_WAIT_SEND(mobile_phones, source, content) VALUES(#{mobilePhones,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR})
-2015-09-10 10:52:57 925 DEBUG [main] [EntityDaoSqlProvider:216] INSERT INTO CUST_MESSAGE_WAIT_SEND(mobile_phones, source, content) VALUES(#{mobilePhones,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR})
-2015-09-10 10:52:57 944 DEBUG [main] [saveAsMap:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(mobile_phones, source, content) VALUES(?, ?, ?) 
-2015-09-10 10:52:57 945 DEBUG [main] [saveAsMap:142] ==> Parameters: 13646874892(String), nfsq(String), test2(String)
-2015-09-10 10:52:57 969 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
-2015-09-10 10:52:58 023 INFO  [main] [SQLErrorCodesFactory:126] SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase]
-2015-09-10 10:52:58 301 DEBUG [main] [select:142] ==>  Preparing: SELECT SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL AS MAXID FROM DUAL 
-2015-09-10 10:52:58 302 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 10:52:58 323 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 10:52:58 326 DEBUG [main] [select:142] ==>  Preparing: SELECT SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL AS MAXID FROM DUAL 
-2015-09-10 10:52:58 327 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 10:52:58 330 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 10:52:58 331 DEBUG [main] [EntityDaoSqlProvider:334] INSERT INTO CUST_MESSAGE_WAIT_SEND(id, total_phone_number, mobile_phones, accept_time, checked, remark, source, send_num, content, status)  SELECT 292, #{param1[0].totalPhoneNumber,jdbcType=NUMERIC}, #{param1[0].mobilePhones,jdbcType=VARCHAR}, #{param1[0].acceptTime,jdbcType=DATE}, #{param1[0].checked,jdbcType=NUMERIC}, #{param1[0].remark,jdbcType=VARCHAR}, #{param1[0].source,jdbcType=VARCHAR}, #{param1[0].sendNum,jdbcType=NUMERIC}, #{param1[0].content,jdbcType=VARCHAR}, #{param1[0].status,jdbcType=INTEGER} FROM dual UNION ALL SELECT 293, #{param1[1].totalPhoneNumber,jdbcType=NUMERIC}, #{param1[1].mobilePhones,jdbcType=VARCHAR}, #{param1[1].acceptTime,jdbcType=DATE}, #{param1[1].checked,jdbcType=NUMERIC}, #{param1[1].remark,jdbcType=VARCHAR}, #{param1[1].source,jdbcType=VARCHAR}, #{param1[1].sendNum,jdbcType=NUMERIC}, #{param1[1].content,jdbcType=VARCHAR}, #{param1[1].status,jdbcType=INTEGER} FROM dual 
-2015-09-10 10:52:58 334 DEBUG [main] [saves:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(id, total_phone_number, mobile_phones, accept_time, checked, remark, source, send_num, content, status) SELECT 292, ?, ?, ?, ?, ?, ?, ?, ?, ? FROM dual UNION ALL SELECT 293, ?, ?, ?, ?, ?, ?, ?, ?, ? FROM dual 
-2015-09-10 10:52:58 339 DEBUG [main] [saves:142] ==> Parameters: null, 13646874892(String), null, null, null, nfsq(String), null, test2(String), null, null, 13646874892(String), null, null, null, nfsq(String), null, test1(String), null
-2015-09-10 10:52:58 349 DEBUG [main] [saves:142] <==    Updates: 2
-2015-09-10 10:52:58 352 DEBUG [main] [select:142] ==>  Preparing: SELECT 293 AS MAXID FROM DUAL 
-2015-09-10 10:52:58 353 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 10:52:58 360 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 10:52:58 364 INFO  [Thread-1] [GenericApplicationContext:873] Closing org.springframework.context.support.GenericApplicationContext@1ffe63b9: startup date [Thu Sep 10 10:52:55 CST 2015]; root of context hierarchy
-2015-09-10 10:53:47 800 INFO  [main] [TestContextManager:236] Could not instantiate TestExecutionListener class [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their dependencies) available.
-2015-09-10 10:53:48 035 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/basic-spring.xml]
-2015-09-10 10:53:48 352 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
-2015-09-10 10:53:48 441 INFO  [main] [GenericApplicationContext:513] Refreshing org.springframework.context.support.GenericApplicationContext@1ffe63b9: startup date [Thu Sep 10 10:53:48 CST 2015]; root of context hierarchy
-2015-09-10 10:53:48 588 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [system.properties]
-2015-09-10 10:53:48 594 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
-2015-09-10 10:53:49 511 INFO  [main] [ClassPathXmlApplicationContext:513] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@79c5636f: startup date [Thu Sep 10 10:53:49 CST 2015]; root of context hierarchy
-2015-09-10 10:53:49 513 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/basic-spring.xml]
-2015-09-10 10:53:49 571 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
-2015-09-10 10:53:49 648 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [system.properties]
-2015-09-10 10:53:49 652 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
-2015-09-10 10:53:49 750 DEBUG [main] [OracleSimpleSqlBuilder:60] INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(#{totalPhoneNumber,jdbcType=NUMERIC}, #{mobilePhones,jdbcType=VARCHAR}, #{acceptTime,jdbcType=DATE}, #{checked,jdbcType=NUMERIC}, #{remark,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, SEQ_CUST_MESSAGE_WAIT_SEND.nextval,#{sendNum,jdbcType=NUMERIC}, #{content,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER})
-2015-09-10 10:53:50 623 DEBUG [main] [save:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(?, ?, ?, ?, ?, ?, SEQ_CUST_MESSAGE_WAIT_SEND.nextval,?, ?, ?) 
-2015-09-10 10:53:50 875 DEBUG [main] [save:142] ==> Parameters: null, 13646874892(String), null, null, null, nfsq(String), null, test2(String), null
-2015-09-10 10:53:50 899 DEBUG [main] [save:142] <==    Updates: 1
-2015-09-10 10:53:50 970 DEBUG [main] [select:142] ==>  Preparing: SELECT null AS MAXID FROM DUAL 
-2015-09-10 10:53:50 972 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 10:53:51 112 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 10:59:54 352 INFO  [main] [TestContextManager:236] Could not instantiate TestExecutionListener class [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their dependencies) available.
-2015-09-10 10:59:54 608 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/basic-spring.xml]
-2015-09-10 10:59:54 979 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
-2015-09-10 10:59:55 084 INFO  [main] [GenericApplicationContext:513] Refreshing org.springframework.context.support.GenericApplicationContext@1ffe63b9: startup date [Thu Sep 10 10:59:55 CST 2015]; root of context hierarchy
-2015-09-10 10:59:55 235 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [system.properties]
-2015-09-10 10:59:55 245 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
-2015-09-10 10:59:56 291 INFO  [main] [ClassPathXmlApplicationContext:513] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@79c5636f: startup date [Thu Sep 10 10:59:56 CST 2015]; root of context hierarchy
-2015-09-10 10:59:56 294 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/basic-spring.xml]
-2015-09-10 10:59:56 346 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
-2015-09-10 10:59:56 409 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [system.properties]
-2015-09-10 10:59:56 412 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
-2015-09-10 10:59:57 418 DEBUG [main] [select:142] ==>  Preparing: SELECT SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL AS MAXID FROM DUAL 
-2015-09-10 10:59:57 656 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 10:59:57 782 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 10:59:57 786 DEBUG [main] [OracleSimpleSqlBuilder:62] INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(#{totalPhoneNumber,jdbcType=NUMERIC}, #{mobilePhones,jdbcType=VARCHAR}, #{acceptTime,jdbcType=DATE}, #{checked,jdbcType=NUMERIC}, #{remark,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, 295,#{sendNum,jdbcType=NUMERIC}, #{content,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER})
-2015-09-10 10:59:57 970 DEBUG [main] [save:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(?, ?, ?, ?, ?, ?, 295,?, ?, ?) 
-2015-09-10 10:59:57 986 DEBUG [main] [save:142] ==> Parameters: null, 13646874892(String), null, null, null, nfsq(String), null, test2(String), null
-2015-09-10 10:59:57 995 DEBUG [main] [save:142] <==    Updates: 1
-2015-09-10 10:59:57 998 DEBUG [main] [select:142] ==>  Preparing: SELECT 295 AS MAXID FROM DUAL 
-2015-09-10 10:59:57 999 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 10:59:58 007 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 11:00:12 009 DEBUG [main] [select:142] ==>  Preparing: SELECT SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL AS MAXID FROM DUAL 
-2015-09-10 11:00:12 010 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 11:00:12 015 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 11:00:12 016 DEBUG [main] [OracleSimpleSqlBuilder:62] INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(#{totalPhoneNumber,jdbcType=NUMERIC}, #{mobilePhones,jdbcType=VARCHAR}, #{acceptTime,jdbcType=DATE}, #{checked,jdbcType=NUMERIC}, #{remark,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, 296,#{sendNum,jdbcType=NUMERIC}, #{content,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER})
-2015-09-10 11:00:12 022 DEBUG [main] [saveOrUpdate:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(?, ?, ?, ?, ?, ?, 296,?, ?, ?) 
-2015-09-10 11:00:12 023 DEBUG [main] [saveOrUpdate:142] ==> Parameters: null, 13646874892(String), null, null, null, nfsq(String), null, test2forupdate(String), null
-2015-09-10 11:00:12 028 DEBUG [main] [saveOrUpdate:142] <==    Updates: 1
-2015-09-10 11:00:12 033 DEBUG [main] [select:142] ==>  Preparing: SELECT 296 AS MAXID FROM DUAL 
-2015-09-10 11:00:12 034 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 11:00:12 038 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 11:00:12 040 DEBUG [main] [OracleSimpleSqlBuilder:62] INSERT INTO CUST_MESSAGE_WAIT_SEND(mobile_phones, source, content) VALUES(#{mobilePhones,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR})
-2015-09-10 11:00:12 040 DEBUG [main] [EntityDaoSqlProvider:216] INSERT INTO CUST_MESSAGE_WAIT_SEND(mobile_phones, source, content) VALUES(#{mobilePhones,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR})
-2015-09-10 11:00:12 045 DEBUG [main] [saveAsMap:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(mobile_phones, source, content) VALUES(?, ?, ?) 
-2015-09-10 11:00:12 047 DEBUG [main] [saveAsMap:142] ==> Parameters: 13646874892(String), nfsq(String), test2(String)
-2015-09-10 11:00:12 092 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
-2015-09-10 11:00:12 128 INFO  [main] [SQLErrorCodesFactory:126] SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase]
-2015-09-10 11:00:12 148 DEBUG [main] [select:142] ==>  Preparing: SELECT SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL AS MAXID FROM DUAL 
-2015-09-10 11:00:12 149 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 11:00:12 154 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 11:00:12 158 DEBUG [main] [select:142] ==>  Preparing: SELECT SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL AS MAXID FROM DUAL 
-2015-09-10 11:00:12 159 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 11:00:12 166 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 11:00:12 166 DEBUG [main] [EntityDaoSqlProvider:334] INSERT INTO CUST_MESSAGE_WAIT_SEND(id, total_phone_number, mobile_phones, accept_time, checked, remark, source, send_num, content, status)  SELECT 297, #{param1[0].totalPhoneNumber,jdbcType=NUMERIC}, #{param1[0].mobilePhones,jdbcType=VARCHAR}, #{param1[0].acceptTime,jdbcType=DATE}, #{param1[0].checked,jdbcType=NUMERIC}, #{param1[0].remark,jdbcType=VARCHAR}, #{param1[0].source,jdbcType=VARCHAR}, #{param1[0].sendNum,jdbcType=NUMERIC}, #{param1[0].content,jdbcType=VARCHAR}, #{param1[0].status,jdbcType=INTEGER} FROM dual UNION ALL SELECT 298, #{param1[1].totalPhoneNumber,jdbcType=NUMERIC}, #{param1[1].mobilePhones,jdbcType=VARCHAR}, #{param1[1].acceptTime,jdbcType=DATE}, #{param1[1].checked,jdbcType=NUMERIC}, #{param1[1].remark,jdbcType=VARCHAR}, #{param1[1].source,jdbcType=VARCHAR}, #{param1[1].sendNum,jdbcType=NUMERIC}, #{param1[1].content,jdbcType=VARCHAR}, #{param1[1].status,jdbcType=INTEGER} FROM dual 
-2015-09-10 11:00:12 174 DEBUG [main] [saves:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(id, total_phone_number, mobile_phones, accept_time, checked, remark, source, send_num, content, status) SELECT 297, ?, ?, ?, ?, ?, ?, ?, ?, ? FROM dual UNION ALL SELECT 298, ?, ?, ?, ?, ?, ?, ?, ?, ? FROM dual 
-2015-09-10 11:00:12 184 DEBUG [main] [saves:142] ==> Parameters: null, 13646874892(String), null, null, null, nfsq(String), null, test2(String), null, null, 13646874892(String), null, null, null, nfsq(String), null, test1(String), null
-2015-09-10 11:00:12 190 DEBUG [main] [saves:142] <==    Updates: 2
-2015-09-10 11:00:12 194 DEBUG [main] [select:142] ==>  Preparing: SELECT 298 AS MAXID FROM DUAL 
-2015-09-10 11:00:12 196 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 11:00:12 203 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 11:00:12 206 INFO  [Thread-1] [GenericApplicationContext:873] Closing org.springframework.context.support.GenericApplicationContext@1ffe63b9: startup date [Thu Sep 10 10:59:55 CST 2015]; root of context hierarchy
-2015-09-10 11:22:26 241 INFO  [main] [TestContextManager:236] Could not instantiate TestExecutionListener class [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their dependencies) available.
-2015-09-10 11:22:26 538 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/basic-spring.xml]
-2015-09-10 11:22:26 910 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
-2015-09-10 11:22:27 026 INFO  [main] [GenericApplicationContext:513] Refreshing org.springframework.context.support.GenericApplicationContext@1e802ef9: startup date [Thu Sep 10 11:22:27 CST 2015]; root of context hierarchy
-2015-09-10 11:22:27 184 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [system.properties]
-2015-09-10 11:22:27 190 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
-2015-09-10 11:22:28 322 INFO  [main] [ClassPathXmlApplicationContext:513] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@55b62629: startup date [Thu Sep 10 11:22:28 CST 2015]; root of context hierarchy
-2015-09-10 11:22:28 324 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/basic-spring.xml]
-2015-09-10 11:22:28 365 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
-2015-09-10 11:22:28 433 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [system.properties]
-2015-09-10 11:22:28 436 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
-2015-09-10 11:22:28 581 INFO  [Thread-1] [GenericApplicationContext:873] Closing org.springframework.context.support.GenericApplicationContext@1e802ef9: startup date [Thu Sep 10 11:22:27 CST 2015]; root of context hierarchy
-2015-09-10 11:27:19 502 INFO  [main] [TestContextManager:236] Could not instantiate TestExecutionListener class [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their dependencies) available.
-2015-09-10 11:27:19 829 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/basic-spring.xml]
-2015-09-10 11:27:20 190 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
-2015-09-10 11:27:20 304 INFO  [main] [GenericApplicationContext:513] Refreshing org.springframework.context.support.GenericApplicationContext@1ffe63b9: startup date [Thu Sep 10 11:27:20 CST 2015]; root of context hierarchy
-2015-09-10 11:27:20 477 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [system.properties]
-2015-09-10 11:27:20 483 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
-2015-09-10 11:27:21 746 INFO  [main] [ClassPathXmlApplicationContext:513] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6a078481: startup date [Thu Sep 10 11:27:21 CST 2015]; root of context hierarchy
-2015-09-10 11:27:21 749 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/basic-spring.xml]
-2015-09-10 11:27:21 817 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
-2015-09-10 11:27:21 890 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [system.properties]
-2015-09-10 11:27:21 893 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
-2015-09-10 11:27:23 052 DEBUG [main] [select:142] ==>  Preparing: SELECT SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL AS MAXID FROM DUAL 
-2015-09-10 11:27:23 306 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 11:27:23 432 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 11:27:23 437 DEBUG [main] [OracleSimpleSqlBuilder:65] INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(#{totalPhoneNumber,jdbcType=NUMERIC}, #{mobilePhones,jdbcType=VARCHAR}, #{acceptTime,jdbcType=DATE}, #{checked,jdbcType=NUMERIC}, #{remark,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, 299,#{sendNum,jdbcType=NUMERIC}, #{content,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER})
-2015-09-10 11:27:23 598 DEBUG [main] [save:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(?, ?, ?, ?, ?, ?, 299,?, ?, ?) 
-2015-09-10 11:27:23 610 DEBUG [main] [save:142] ==> Parameters: null, 13646874892(String), null, null, null, nfsq(String), null, test2(String), null
-2015-09-10 11:27:23 621 DEBUG [main] [save:142] <==    Updates: 1
-2015-09-10 11:27:23 625 DEBUG [main] [select:142] ==>  Preparing: SELECT 299 AS MAXID FROM DUAL 
-2015-09-10 11:27:23 625 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 11:27:23 634 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 11:27:23 643 DEBUG [main] [select:142] ==>  Preparing: SELECT SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL AS MAXID FROM DUAL 
-2015-09-10 11:27:23 644 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 11:27:23 649 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 11:27:23 649 DEBUG [main] [OracleSimpleSqlBuilder:65] INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(#{totalPhoneNumber,jdbcType=NUMERIC}, #{mobilePhones,jdbcType=VARCHAR}, #{acceptTime,jdbcType=DATE}, #{checked,jdbcType=NUMERIC}, #{remark,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, 300,#{sendNum,jdbcType=NUMERIC}, #{content,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER})
-2015-09-10 11:27:23 652 DEBUG [main] [saveOrUpdate:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(?, ?, ?, ?, ?, ?, 300,?, ?, ?) 
-2015-09-10 11:27:23 654 DEBUG [main] [saveOrUpdate:142] ==> Parameters: null, 13646874892(String), null, null, null, nfsq(String), null, test2forupdate(String), null
-2015-09-10 11:27:23 657 DEBUG [main] [saveOrUpdate:142] <==    Updates: 1
-2015-09-10 11:27:23 679 DEBUG [main] [select:142] ==>  Preparing: SELECT 300 AS MAXID FROM DUAL 
-2015-09-10 11:27:23 679 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 11:27:23 695 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 11:27:23 709 DEBUG [main] [select:142] ==>  Preparing: SELECT SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL AS MAXID FROM DUAL 
-2015-09-10 11:27:23 710 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 11:27:23 725 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 11:27:23 729 DEBUG [main] [select:142] ==>  Preparing: SELECT SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL AS MAXID FROM DUAL 
-2015-09-10 11:27:23 730 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 11:27:23 738 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 11:27:23 740 DEBUG [main] [EntityDaoSqlProvider:334] INSERT INTO CUST_MESSAGE_WAIT_SEND(id, total_phone_number, mobile_phones, accept_time, checked, remark, source, send_num, content, status)  SELECT 301, #{param1[0].totalPhoneNumber,jdbcType=NUMERIC}, #{param1[0].mobilePhones,jdbcType=VARCHAR}, #{param1[0].acceptTime,jdbcType=DATE}, #{param1[0].checked,jdbcType=NUMERIC}, #{param1[0].remark,jdbcType=VARCHAR}, #{param1[0].source,jdbcType=VARCHAR}, #{param1[0].sendNum,jdbcType=NUMERIC}, #{param1[0].content,jdbcType=VARCHAR}, #{param1[0].status,jdbcType=INTEGER} FROM dual UNION ALL SELECT 302, #{param1[1].totalPhoneNumber,jdbcType=NUMERIC}, #{param1[1].mobilePhones,jdbcType=VARCHAR}, #{param1[1].acceptTime,jdbcType=DATE}, #{param1[1].checked,jdbcType=NUMERIC}, #{param1[1].remark,jdbcType=VARCHAR}, #{param1[1].source,jdbcType=VARCHAR}, #{param1[1].sendNum,jdbcType=NUMERIC}, #{param1[1].content,jdbcType=VARCHAR}, #{param1[1].status,jdbcType=INTEGER} FROM dual 
-2015-09-10 11:27:23 744 DEBUG [main] [saves:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(id, total_phone_number, mobile_phones, accept_time, checked, remark, source, send_num, content, status) SELECT 301, ?, ?, ?, ?, ?, ?, ?, ?, ? FROM dual UNION ALL SELECT 302, ?, ?, ?, ?, ?, ?, ?, ?, ? FROM dual 
-2015-09-10 11:27:23 748 DEBUG [main] [saves:142] ==> Parameters: null, 13646874892(String), null, null, null, nfsq(String), null, test2(String), null, null, 13646874892(String), null, null, null, nfsq(String), null, test1(String), null
-2015-09-10 11:27:23 755 DEBUG [main] [saves:142] <==    Updates: 2
-2015-09-10 11:27:23 759 DEBUG [main] [select:142] ==>  Preparing: SELECT 302 AS MAXID FROM DUAL 
-2015-09-10 11:27:23 759 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 11:27:23 762 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 11:27:23 765 INFO  [Thread-1] [GenericApplicationContext:873] Closing org.springframework.context.support.GenericApplicationContext@1ffe63b9: startup date [Thu Sep 10 11:27:20 CST 2015]; root of context hierarchy
-2015-09-10 11:28:29 425 INFO  [main] [TestContextManager:236] Could not instantiate TestExecutionListener class [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their dependencies) available.
-2015-09-10 11:28:29 671 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/basic-spring.xml]
-2015-09-10 11:28:30 008 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
-2015-09-10 11:28:30 108 INFO  [main] [GenericApplicationContext:513] Refreshing org.springframework.context.support.GenericApplicationContext@1e802ef9: startup date [Thu Sep 10 11:28:30 CST 2015]; root of context hierarchy
-2015-09-10 11:28:30 268 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [system.properties]
-2015-09-10 11:28:30 273 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
-2015-09-10 11:28:31 252 INFO  [main] [ClassPathXmlApplicationContext:513] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@55b62629: startup date [Thu Sep 10 11:28:31 CST 2015]; root of context hierarchy
-2015-09-10 11:28:31 255 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/basic-spring.xml]
-2015-09-10 11:28:31 325 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
-2015-09-10 11:28:31 390 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [system.properties]
-2015-09-10 11:28:31 395 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
-2015-09-10 11:28:31 513 INFO  [Thread-1] [GenericApplicationContext:873] Closing org.springframework.context.support.GenericApplicationContext@1e802ef9: startup date [Thu Sep 10 11:28:30 CST 2015]; root of context hierarchy
-2015-09-10 11:28:59 452 INFO  [main] [TestContextManager:236] Could not instantiate TestExecutionListener class [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their dependencies) available.
-2015-09-10 11:28:59 688 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/basic-spring.xml]
-2015-09-10 11:29:00 064 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
-2015-09-10 11:29:00 175 INFO  [main] [GenericApplicationContext:513] Refreshing org.springframework.context.support.GenericApplicationContext@1e802ef9: startup date [Thu Sep 10 11:29:00 CST 2015]; root of context hierarchy
-2015-09-10 11:29:00 338 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [system.properties]
-2015-09-10 11:29:00 344 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
-2015-09-10 11:29:01 272 INFO  [main] [ClassPathXmlApplicationContext:513] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5e63cad: startup date [Thu Sep 10 11:29:01 CST 2015]; root of context hierarchy
-2015-09-10 11:29:01 275 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/basic-spring.xml]
-2015-09-10 11:29:01 321 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
-2015-09-10 11:29:01 391 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [system.properties]
-2015-09-10 11:29:01 403 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
-2015-09-10 11:29:01 525 INFO  [Thread-1] [GenericApplicationContext:873] Closing org.springframework.context.support.GenericApplicationContext@1e802ef9: startup date [Thu Sep 10 11:29:00 CST 2015]; root of context hierarchy
-2015-09-10 13:52:24 493 INFO  [main] [TestContextManager:236] Could not instantiate TestExecutionListener class [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their dependencies) available.
-2015-09-10 13:52:24 793 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/basic-spring.xml]
-2015-09-10 13:52:25 113 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
-2015-09-10 13:52:25 236 INFO  [main] [GenericApplicationContext:513] Refreshing org.springframework.context.support.GenericApplicationContext@1e802ef9: startup date [Thu Sep 10 13:52:25 CST 2015]; root of context hierarchy
-2015-09-10 13:52:25 417 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [system.properties]
-2015-09-10 13:52:25 424 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
-2015-09-10 13:52:26 465 INFO  [main] [ClassPathXmlApplicationContext:513] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@55b62629: startup date [Thu Sep 10 13:52:26 CST 2015]; root of context hierarchy
-2015-09-10 13:52:26 469 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/basic-spring.xml]
-2015-09-10 13:52:26 524 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
-2015-09-10 13:52:26 634 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [system.properties]
-2015-09-10 13:52:26 638 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
-2015-09-10 13:55:16 195 INFO  [main] [TestContextManager:236] Could not instantiate TestExecutionListener class [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their dependencies) available.
-2015-09-10 13:55:16 437 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/basic-spring.xml]
-2015-09-10 13:55:16 775 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
-2015-09-10 13:55:16 887 INFO  [main] [GenericApplicationContext:513] Refreshing org.springframework.context.support.GenericApplicationContext@1e802ef9: startup date [Thu Sep 10 13:55:16 CST 2015]; root of context hierarchy
-2015-09-10 13:55:17 066 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [system.properties]
-2015-09-10 13:55:17 073 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
-2015-09-10 13:55:18 088 INFO  [main] [ClassPathXmlApplicationContext:513] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@a53bb6f: startup date [Thu Sep 10 13:55:18 CST 2015]; root of context hierarchy
-2015-09-10 13:55:18 091 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/basic-spring.xml]
-2015-09-10 13:55:18 134 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
-2015-09-10 13:55:18 221 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [system.properties]
-2015-09-10 13:55:18 232 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
-2015-09-10 13:55:57 385 INFO  [Thread-1] [GenericApplicationContext:873] Closing org.springframework.context.support.GenericApplicationContext@1e802ef9: startup date [Thu Sep 10 13:55:16 CST 2015]; root of context hierarchy
-2015-09-10 14:02:38 076 INFO  [main] [TestContextManager:236] Could not instantiate TestExecutionListener class [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their dependencies) available.
-2015-09-10 14:02:38 307 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/basic-spring.xml]
-2015-09-10 14:02:38 633 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
-2015-09-10 14:02:38 728 INFO  [main] [GenericApplicationContext:513] Refreshing org.springframework.context.support.GenericApplicationContext@1e802ef9: startup date [Thu Sep 10 14:02:38 CST 2015]; root of context hierarchy
-2015-09-10 14:02:38 906 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [system.properties]
-2015-09-10 14:02:38 911 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
-2015-09-10 14:02:39 916 INFO  [main] [ClassPathXmlApplicationContext:513] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@a53bb6f: startup date [Thu Sep 10 14:02:39 CST 2015]; root of context hierarchy
-2015-09-10 14:02:39 919 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/basic-spring.xml]
-2015-09-10 14:02:39 960 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
-2015-09-10 14:02:40 016 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [system.properties]
-2015-09-10 14:02:40 018 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
-2015-09-10 14:02:41 209 DEBUG [main] [select:142] ==>  Preparing: SELECT SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL AS MAXID FROM DUAL 
-2015-09-10 14:02:41 434 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 14:02:41 570 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 14:02:41 575 DEBUG [main] [OracleSimpleSqlBuilder:68] INSERT INTO CUST_MESSAGE_WAIT_SEND(id,mobile_phones, source, content) VALUES(303,#{mobilePhones,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR})
-2015-09-10 14:02:41 575 DEBUG [main] [EntityDaoSqlProvider:216] INSERT INTO CUST_MESSAGE_WAIT_SEND(id,mobile_phones, source, content) VALUES(303,#{mobilePhones,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR})
-2015-09-10 14:02:41 816 DEBUG [main] [saveAsMap:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(id,mobile_phones, source, content) VALUES(303,?, ?, ?) 
-2015-09-10 14:02:41 829 DEBUG [main] [saveAsMap:142] ==> Parameters: 13646874892(String), nfsq(String), test2(String)
-2015-09-10 14:02:41 840 DEBUG [main] [saveAsMap:142] <==    Updates: 1
-2015-09-10 14:02:41 849 DEBUG [main] [select:142] ==>  Preparing: SELECT 303 AS MAXID FROM DUAL 
-2015-09-10 14:02:41 850 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 14:02:41 859 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 14:02:41 866 INFO  [Thread-1] [GenericApplicationContext:873] Closing org.springframework.context.support.GenericApplicationContext@1e802ef9: startup date [Thu Sep 10 14:02:38 CST 2015]; root of context hierarchy
-2015-09-10 14:14:22 265 INFO  [main] [TestContextManager:236] Could not instantiate TestExecutionListener class [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their dependencies) available.
-2015-09-10 14:14:22 579 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/basic-spring.xml]
-2015-09-10 14:14:22 918 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
-2015-09-10 14:14:23 031 INFO  [main] [GenericApplicationContext:513] Refreshing org.springframework.context.support.GenericApplicationContext@1ffe63b9: startup date [Thu Sep 10 14:14:23 CST 2015]; root of context hierarchy
-2015-09-10 14:14:23 197 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [system.properties]
-2015-09-10 14:14:23 203 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
-2015-09-10 14:14:24 283 DEBUG [main] [MysqlSimpleSqlBuilder:49] INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, send_num, content, status) VALUES(#{totalPhoneNumber,jdbcType=NUMERIC}, #{mobilePhones,jdbcType=VARCHAR}, #{acceptTime,jdbcType=DATE}, #{checked,jdbcType=NUMERIC}, #{remark,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, #{sendNum,jdbcType=NUMERIC}, #{content,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER})
-2015-09-10 14:14:24 656 DEBUG [main] [save:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, send_num, content, status) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2015-09-10 14:14:24 689 DEBUG [main] [save:142] ==> Parameters: null, 13646874892(String), null, null, null, nfsq(String), null, test2(String), null
-2015-09-10 14:14:24 694 DEBUG [main] [save:142] <==    Updates: 1
-2015-09-10 14:14:24 772 DEBUG [main] [select:142] ==>  Preparing: SELECT LAST_INSERT_ID() AS MAXID FROM DUAL 
-2015-09-10 14:14:24 773 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 14:14:24 793 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 14:14:24 805 DEBUG [main] [MysqlSimpleSqlBuilder:49] INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, send_num, content, status) VALUES(#{totalPhoneNumber,jdbcType=NUMERIC}, #{mobilePhones,jdbcType=VARCHAR}, #{acceptTime,jdbcType=DATE}, #{checked,jdbcType=NUMERIC}, #{remark,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, #{sendNum,jdbcType=NUMERIC}, #{content,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER})
-2015-09-10 14:14:24 806 DEBUG [main] [saveOrUpdate:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, send_num, content, status) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2015-09-10 14:14:24 811 DEBUG [main] [saveOrUpdate:142] ==> Parameters: null, 13646874892(String), null, null, null, nfsq(String), null, test2forupdate(String), null
-2015-09-10 14:14:24 813 DEBUG [main] [saveOrUpdate:142] <==    Updates: 1
-2015-09-10 14:14:24 814 DEBUG [main] [select:142] ==>  Preparing: SELECT LAST_INSERT_ID() AS MAXID FROM DUAL 
-2015-09-10 14:14:24 814 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 14:14:24 815 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 14:14:24 817 DEBUG [main] [MysqlSimpleSqlBuilder:49] INSERT INTO CUST_MESSAGE_WAIT_SEND(mobile_phones, source, content) VALUES(#{mobilePhones,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR})
-2015-09-10 14:14:24 818 DEBUG [main] [EntityDaoSqlProvider:216] INSERT INTO CUST_MESSAGE_WAIT_SEND(mobile_phones, source, content) VALUES(#{mobilePhones,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR})
-2015-09-10 14:14:24 820 DEBUG [main] [saveAsMap:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(mobile_phones, source, content) VALUES(?, ?, ?) 
-2015-09-10 14:14:24 820 DEBUG [main] [saveAsMap:142] ==> Parameters: 13646874892(String), nfsq(String), test2(String)
-2015-09-10 14:14:24 821 DEBUG [main] [saveAsMap:142] <==    Updates: 1
-2015-09-10 14:14:24 822 DEBUG [main] [select:142] ==>  Preparing: SELECT LAST_INSERT_ID() AS MAXID FROM DUAL 
-2015-09-10 14:14:24 823 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 14:14:24 824 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 14:14:24 828 DEBUG [main] [EntityDaoSqlProvider:334] INSERT INTO CUST_MESSAGE_WAIT_SEND(id, total_phone_number, mobile_phones, accept_time, checked, remark, source, send_num, content, status) VALUES(null, #{param1[0].totalPhoneNumber,jdbcType=NUMERIC}, #{param1[0].mobilePhones,jdbcType=VARCHAR}, #{param1[0].acceptTime,jdbcType=DATE}, #{param1[0].checked,jdbcType=NUMERIC}, #{param1[0].remark,jdbcType=VARCHAR}, #{param1[0].source,jdbcType=VARCHAR}, #{param1[0].sendNum,jdbcType=NUMERIC}, #{param1[0].content,jdbcType=VARCHAR}, #{param1[0].status,jdbcType=INTEGER}), (null, #{param1[1].totalPhoneNumber,jdbcType=NUMERIC}, #{param1[1].mobilePhones,jdbcType=VARCHAR}, #{param1[1].acceptTime,jdbcType=DATE}, #{param1[1].checked,jdbcType=NUMERIC}, #{param1[1].remark,jdbcType=VARCHAR}, #{param1[1].source,jdbcType=VARCHAR}, #{param1[1].sendNum,jdbcType=NUMERIC}, #{param1[1].content,jdbcType=VARCHAR}, #{param1[1].status,jdbcType=INTEGER})
-2015-09-10 14:14:24 831 DEBUG [main] [saves:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(id, total_phone_number, mobile_phones, accept_time, checked, remark, source, send_num, content, status) VALUES(null, ?, ?, ?, ?, ?, ?, ?, ?, ?), (null, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2015-09-10 14:14:24 839 DEBUG [main] [saves:142] ==> Parameters: null, 13646874892(String), null, null, null, nfsq(String), null, test2(String), null, null, 13646874892(String), null, null, null, nfsq(String), null, test1(String), null
-2015-09-10 14:14:24 840 DEBUG [main] [saves:142] <==    Updates: 2
-2015-09-10 14:14:24 843 DEBUG [main] [select:142] ==>  Preparing: SELECT LAST_INSERT_ID() AS MAXID FROM DUAL 
-2015-09-10 14:14:24 843 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 14:14:24 844 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 14:14:24 847 INFO  [Thread-1] [GenericApplicationContext:873] Closing org.springframework.context.support.GenericApplicationContext@1ffe63b9: startup date [Thu Sep 10 14:14:23 CST 2015]; root of context hierarchy
-2015-09-10 14:16:41 003 INFO  [main] [TestContextManager:236] Could not instantiate TestExecutionListener class [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their dependencies) available.
-2015-09-10 14:16:41 266 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/basic-spring.xml]
-2015-09-10 14:16:41 601 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
-2015-09-10 14:16:41 690 INFO  [main] [GenericApplicationContext:513] Refreshing org.springframework.context.support.GenericApplicationContext@1ffe63b9: startup date [Thu Sep 10 14:16:41 CST 2015]; root of context hierarchy
-2015-09-10 14:16:41 871 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [system.properties]
-2015-09-10 14:16:41 878 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
-2015-09-10 14:16:42 813 DEBUG [main] [MysqlSimpleSqlBuilder:49] INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, send_num, content, status) VALUES(#{totalPhoneNumber,jdbcType=NUMERIC}, #{mobilePhones,jdbcType=VARCHAR}, #{acceptTime,jdbcType=DATE}, #{checked,jdbcType=NUMERIC}, #{remark,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, #{sendNum,jdbcType=NUMERIC}, #{content,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER})
-2015-09-10 14:16:43 151 DEBUG [main] [save:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, send_num, content, status) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2015-09-10 14:16:43 189 DEBUG [main] [save:142] ==> Parameters: null, 13646874892(String), null, null, null, nfsq(String), null, test2(String), null
-2015-09-10 14:16:43 191 DEBUG [main] [save:142] <==    Updates: 1
-2015-09-10 14:16:43 246 DEBUG [main] [select:142] ==>  Preparing: SELECT LAST_INSERT_ID() AS MAXID FROM DUAL 
-2015-09-10 14:16:43 247 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 14:16:43 260 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 14:16:43 268 DEBUG [main] [MysqlSimpleSqlBuilder:49] INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, send_num, content, status) VALUES(#{totalPhoneNumber,jdbcType=NUMERIC}, #{mobilePhones,jdbcType=VARCHAR}, #{acceptTime,jdbcType=DATE}, #{checked,jdbcType=NUMERIC}, #{remark,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, #{sendNum,jdbcType=NUMERIC}, #{content,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER})
-2015-09-10 14:16:43 269 DEBUG [main] [saveOrUpdate:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, send_num, content, status) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2015-09-10 14:16:43 270 DEBUG [main] [saveOrUpdate:142] ==> Parameters: null, 13646874892(String), null, null, null, nfsq(String), null, test2forupdate(String), null
-2015-09-10 14:16:43 273 DEBUG [main] [saveOrUpdate:142] <==    Updates: 1
-2015-09-10 14:16:43 274 DEBUG [main] [select:142] ==>  Preparing: SELECT LAST_INSERT_ID() AS MAXID FROM DUAL 
-2015-09-10 14:16:43 274 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 14:16:43 275 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 14:16:43 277 DEBUG [main] [MysqlSimpleSqlBuilder:49] INSERT INTO CUST_MESSAGE_WAIT_SEND(mobile_phones, source, content) VALUES(#{mobilePhones,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR})
-2015-09-10 14:16:43 277 DEBUG [main] [EntityDaoSqlProvider:216] INSERT INTO CUST_MESSAGE_WAIT_SEND(mobile_phones, source, content) VALUES(#{mobilePhones,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR})
-2015-09-10 14:16:43 280 DEBUG [main] [saveAsMap:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(mobile_phones, source, content) VALUES(?, ?, ?) 
-2015-09-10 14:16:43 283 DEBUG [main] [saveAsMap:142] ==> Parameters: 13646874892(String), nfsq(String), test2(String)
-2015-09-10 14:16:43 284 DEBUG [main] [saveAsMap:142] <==    Updates: 1
-2015-09-10 14:16:43 285 DEBUG [main] [select:142] ==>  Preparing: SELECT LAST_INSERT_ID() AS MAXID FROM DUAL 
-2015-09-10 14:16:43 286 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 14:16:43 287 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 14:16:43 289 DEBUG [main] [EntityDaoSqlProvider:334] INSERT INTO CUST_MESSAGE_WAIT_SEND(id, total_phone_number, mobile_phones, accept_time, checked, remark, source, send_num, content, status) VALUES(null, #{param1[0].totalPhoneNumber,jdbcType=NUMERIC}, #{param1[0].mobilePhones,jdbcType=VARCHAR}, #{param1[0].acceptTime,jdbcType=DATE}, #{param1[0].checked,jdbcType=NUMERIC}, #{param1[0].remark,jdbcType=VARCHAR}, #{param1[0].source,jdbcType=VARCHAR}, #{param1[0].sendNum,jdbcType=NUMERIC}, #{param1[0].content,jdbcType=VARCHAR}, #{param1[0].status,jdbcType=INTEGER}), (null, #{param1[1].totalPhoneNumber,jdbcType=NUMERIC}, #{param1[1].mobilePhones,jdbcType=VARCHAR}, #{param1[1].acceptTime,jdbcType=DATE}, #{param1[1].checked,jdbcType=NUMERIC}, #{param1[1].remark,jdbcType=VARCHAR}, #{param1[1].source,jdbcType=VARCHAR}, #{param1[1].sendNum,jdbcType=NUMERIC}, #{param1[1].content,jdbcType=VARCHAR}, #{param1[1].status,jdbcType=INTEGER})
-2015-09-10 14:16:43 290 DEBUG [main] [saves:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(id, total_phone_number, mobile_phones, accept_time, checked, remark, source, send_num, content, status) VALUES(null, ?, ?, ?, ?, ?, ?, ?, ?, ?), (null, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2015-09-10 14:16:43 296 DEBUG [main] [saves:142] ==> Parameters: null, 13646874892(String), null, null, null, nfsq(String), null, test2(String), null, null, 13646874892(String), null, null, null, nfsq(String), null, test1(String), null
-2015-09-10 14:16:43 298 DEBUG [main] [saves:142] <==    Updates: 2
-2015-09-10 14:16:43 299 DEBUG [main] [select:142] ==>  Preparing: SELECT LAST_INSERT_ID() AS MAXID FROM DUAL 
-2015-09-10 14:16:43 300 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 14:16:43 301 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 14:16:43 304 INFO  [Thread-1] [GenericApplicationContext:873] Closing org.springframework.context.support.GenericApplicationContext@1ffe63b9: startup date [Thu Sep 10 14:16:41 CST 2015]; root of context hierarchy
-2015-09-10 14:51:22 773 INFO  [main] [TestContextManager:236] Could not instantiate TestExecutionListener class [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their dependencies) available.
-2015-09-10 14:51:23 115 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/basic-spring.xml]
-2015-09-10 14:51:23 479 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
-2015-09-10 14:51:23 591 INFO  [main] [GenericApplicationContext:513] Refreshing org.springframework.context.support.GenericApplicationContext@1ffe63b9: startup date [Thu Sep 10 14:51:23 CST 2015]; root of context hierarchy
-2015-09-10 14:51:23 770 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [system.properties]
-2015-09-10 14:51:23 777 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
-2015-09-10 14:51:24 899 DEBUG [main] [MysqlSimpleSqlBuilder:49] INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, send_num, content, status) VALUES(#{totalPhoneNumber,jdbcType=NUMERIC}, #{mobilePhones,jdbcType=VARCHAR}, #{acceptTime,jdbcType=DATE}, #{checked,jdbcType=NUMERIC}, #{remark,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, #{sendNum,jdbcType=NUMERIC}, #{content,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER})
-2015-09-10 14:51:25 285 DEBUG [main] [save:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, send_num, content, status) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2015-09-10 14:51:25 326 DEBUG [main] [save:142] ==> Parameters: null, 13646874892(String), null, null, null, nfsq(String), null, test2(String), null
-2015-09-10 14:51:25 328 DEBUG [main] [save:142] <==    Updates: 1
-2015-09-10 14:51:25 410 DEBUG [main] [select:142] ==>  Preparing: SELECT LAST_INSERT_ID() AS MAXID FROM DUAL 
-2015-09-10 14:51:25 411 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 14:51:25 435 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 14:51:25 441 DEBUG [main] [MysqlSimpleSqlBuilder:49] INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, send_num, content, status) VALUES(#{totalPhoneNumber,jdbcType=NUMERIC}, #{mobilePhones,jdbcType=VARCHAR}, #{acceptTime,jdbcType=DATE}, #{checked,jdbcType=NUMERIC}, #{remark,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, #{sendNum,jdbcType=NUMERIC}, #{content,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER})
-2015-09-10 14:51:25 441 DEBUG [main] [saveOrUpdate:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, send_num, content, status) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2015-09-10 14:51:25 442 DEBUG [main] [saveOrUpdate:142] ==> Parameters: null, 13646874892(String), null, null, null, nfsq(String), null, test2forupdate(String), null
-2015-09-10 14:51:25 444 DEBUG [main] [saveOrUpdate:142] <==    Updates: 1
-2015-09-10 14:51:25 445 DEBUG [main] [select:142] ==>  Preparing: SELECT LAST_INSERT_ID() AS MAXID FROM DUAL 
-2015-09-10 14:51:25 445 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 14:51:25 446 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 14:51:25 451 DEBUG [main] [MysqlSimpleSqlBuilder:49] INSERT INTO CUST_MESSAGE_WAIT_SEND(mobile_phones, source, content) VALUES(#{mobilePhones,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR})
-2015-09-10 14:51:25 452 DEBUG [main] [EntityDaoSqlProvider:216] INSERT INTO CUST_MESSAGE_WAIT_SEND(mobile_phones, source, content) VALUES(#{mobilePhones,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR})
-2015-09-10 14:51:25 456 DEBUG [main] [saveAsMap:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(mobile_phones, source, content) VALUES(?, ?, ?) 
-2015-09-10 14:51:25 456 DEBUG [main] [saveAsMap:142] ==> Parameters: 13646874892(String), nfsq(String), test2(String)
-2015-09-10 14:51:25 457 DEBUG [main] [saveAsMap:142] <==    Updates: 1
-2015-09-10 14:51:25 458 DEBUG [main] [select:142] ==>  Preparing: SELECT LAST_INSERT_ID() AS MAXID FROM DUAL 
-2015-09-10 14:51:25 459 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 14:51:25 459 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 14:51:25 462 DEBUG [main] [EntityDaoSqlProvider:334] INSERT INTO CUST_MESSAGE_WAIT_SEND(id, total_phone_number, mobile_phones, accept_time, checked, remark, source, send_num, content, status) VALUES(null, #{param1[0].totalPhoneNumber,jdbcType=NUMERIC}, #{param1[0].mobilePhones,jdbcType=VARCHAR}, #{param1[0].acceptTime,jdbcType=DATE}, #{param1[0].checked,jdbcType=NUMERIC}, #{param1[0].remark,jdbcType=VARCHAR}, #{param1[0].source,jdbcType=VARCHAR}, #{param1[0].sendNum,jdbcType=NUMERIC}, #{param1[0].content,jdbcType=VARCHAR}, #{param1[0].status,jdbcType=INTEGER}), (null, #{param1[1].totalPhoneNumber,jdbcType=NUMERIC}, #{param1[1].mobilePhones,jdbcType=VARCHAR}, #{param1[1].acceptTime,jdbcType=DATE}, #{param1[1].checked,jdbcType=NUMERIC}, #{param1[1].remark,jdbcType=VARCHAR}, #{param1[1].source,jdbcType=VARCHAR}, #{param1[1].sendNum,jdbcType=NUMERIC}, #{param1[1].content,jdbcType=VARCHAR}, #{param1[1].status,jdbcType=INTEGER})
-2015-09-10 14:51:25 471 DEBUG [main] [saves:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(id, total_phone_number, mobile_phones, accept_time, checked, remark, source, send_num, content, status) VALUES(null, ?, ?, ?, ?, ?, ?, ?, ?, ?), (null, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2015-09-10 14:51:25 479 DEBUG [main] [saves:142] ==> Parameters: null, 13646874892(String), null, null, null, nfsq(String), null, test2(String), null, null, 13646874892(String), null, null, null, nfsq(String), null, test1(String), null
-2015-09-10 14:51:25 480 DEBUG [main] [saves:142] <==    Updates: 2
-2015-09-10 14:51:25 481 DEBUG [main] [select:142] ==>  Preparing: SELECT LAST_INSERT_ID() AS MAXID FROM DUAL 
-2015-09-10 14:51:25 482 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 14:51:25 484 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 14:51:25 487 INFO  [Thread-1] [GenericApplicationContext:873] Closing org.springframework.context.support.GenericApplicationContext@1ffe63b9: startup date [Thu Sep 10 14:51:23 CST 2015]; root of context hierarchy
-2015-09-10 14:52:07 656 INFO  [main] [TestContextManager:236] Could not instantiate TestExecutionListener class [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their dependencies) available.
-2015-09-10 14:52:07 924 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/basic-spring.xml]
-2015-09-10 14:52:08 267 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
-2015-09-10 14:52:08 358 INFO  [main] [GenericApplicationContext:513] Refreshing org.springframework.context.support.GenericApplicationContext@1ffe63b9: startup date [Thu Sep 10 14:52:08 CST 2015]; root of context hierarchy
-2015-09-10 14:52:08 544 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [system.properties]
-2015-09-10 14:52:08 551 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
-2015-09-10 14:52:09 544 INFO  [main] [ClassPathXmlApplicationContext:513] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@79c5636f: startup date [Thu Sep 10 14:52:09 CST 2015]; root of context hierarchy
-2015-09-10 14:52:09 546 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/basic-spring.xml]
-2015-09-10 14:52:09 611 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
-2015-09-10 14:52:09 672 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [system.properties]
-2015-09-10 14:52:09 676 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
-2015-09-10 14:52:10 172 DEBUG [main] [select:142] ==>  Preparing: SELECT SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL AS MAXID FROM DUAL 
-2015-09-10 14:52:10 203 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 14:52:10 229 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
-2015-09-10 14:52:10 265 INFO  [main] [SQLErrorCodesFactory:126] SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase]
-2015-09-10 14:52:10 282 DEBUG [main] [select:142] ==>  Preparing: SELECT SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL AS MAXID FROM DUAL 
-2015-09-10 14:52:10 284 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 14:52:10 299 DEBUG [main] [select:142] ==>  Preparing: SELECT SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL AS MAXID FROM DUAL 
-2015-09-10 14:52:10 300 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 14:52:10 312 DEBUG [main] [select:142] ==>  Preparing: SELECT SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL AS MAXID FROM DUAL 
-2015-09-10 14:52:10 313 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 14:52:10 323 INFO  [Thread-1] [GenericApplicationContext:873] Closing org.springframework.context.support.GenericApplicationContext@1ffe63b9: startup date [Thu Sep 10 14:52:08 CST 2015]; root of context hierarchy
-2015-09-10 14:53:02 500 INFO  [main] [TestContextManager:236] Could not instantiate TestExecutionListener class [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their dependencies) available.
-2015-09-10 14:53:02 806 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/basic-spring.xml]
-2015-09-10 14:53:03 117 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
-2015-09-10 14:53:03 221 INFO  [main] [GenericApplicationContext:513] Refreshing org.springframework.context.support.GenericApplicationContext@1ffe63b9: startup date [Thu Sep 10 14:53:03 CST 2015]; root of context hierarchy
-2015-09-10 14:53:03 386 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [system.properties]
-2015-09-10 14:53:03 392 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
-2015-09-10 14:53:04 440 INFO  [main] [ClassPathXmlApplicationContext:513] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@79c5636f: startup date [Thu Sep 10 14:53:04 CST 2015]; root of context hierarchy
-2015-09-10 14:53:04 443 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/basic-spring.xml]
-2015-09-10 14:53:04 497 INFO  [main] [XmlBeanDefinitionReader:316] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
-2015-09-10 14:53:04 559 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [system.properties]
-2015-09-10 14:53:04 562 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
-2015-09-10 14:53:06 188 DEBUG [main] [select:142] ==>  Preparing: SELECT SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL AS MAXID FROM DUAL 
-2015-09-10 14:53:06 421 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 14:53:06 550 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 14:53:06 555 DEBUG [main] [OracleSimpleSqlBuilder:68] INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(#{totalPhoneNumber,jdbcType=NUMERIC}, #{mobilePhones,jdbcType=VARCHAR}, #{acceptTime,jdbcType=DATE}, #{checked,jdbcType=NUMERIC}, #{remark,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, 304,#{sendNum,jdbcType=NUMERIC}, #{content,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER})
-2015-09-10 14:53:07 149 DEBUG [main] [save:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(?, ?, ?, ?, ?, ?, 304,?, ?, ?) 
-2015-09-10 14:53:07 162 DEBUG [main] [save:142] ==> Parameters: null, 13646874892(String), null, null, null, nfsq(String), null, test2(String), null
-2015-09-10 14:53:07 174 DEBUG [main] [save:142] <==    Updates: 1
-2015-09-10 14:53:07 179 DEBUG [main] [select:142] ==>  Preparing: SELECT 304 AS MAXID FROM DUAL 
-2015-09-10 14:53:07 179 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 14:53:07 184 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 14:53:07 217 DEBUG [main] [select:142] ==>  Preparing: SELECT SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL AS MAXID FROM DUAL 
-2015-09-10 14:53:07 220 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 14:53:07 233 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 14:53:07 234 DEBUG [main] [OracleSimpleSqlBuilder:68] INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(#{totalPhoneNumber,jdbcType=NUMERIC}, #{mobilePhones,jdbcType=VARCHAR}, #{acceptTime,jdbcType=DATE}, #{checked,jdbcType=NUMERIC}, #{remark,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, 305,#{sendNum,jdbcType=NUMERIC}, #{content,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER})
-2015-09-10 14:53:07 238 DEBUG [main] [saveOrUpdate:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(?, ?, ?, ?, ?, ?, 305,?, ?, ?) 
-2015-09-10 14:53:07 238 DEBUG [main] [saveOrUpdate:142] ==> Parameters: null, 13646874892(String), null, null, null, nfsq(String), null, test2forupdate(String), null
-2015-09-10 14:53:07 247 DEBUG [main] [saveOrUpdate:142] <==    Updates: 1
-2015-09-10 14:53:07 250 DEBUG [main] [select:142] ==>  Preparing: SELECT 305 AS MAXID FROM DUAL 
-2015-09-10 14:53:07 251 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 14:53:07 258 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 14:53:07 287 DEBUG [main] [select:142] ==>  Preparing: SELECT SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL AS MAXID FROM DUAL 
-2015-09-10 14:53:07 289 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 14:53:07 322 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 14:53:07 322 DEBUG [main] [OracleSimpleSqlBuilder:68] INSERT INTO CUST_MESSAGE_WAIT_SEND(id,mobile_phones, source, content) VALUES(306,#{mobilePhones,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR})
-2015-09-10 14:53:07 323 DEBUG [main] [EntityDaoSqlProvider:216] INSERT INTO CUST_MESSAGE_WAIT_SEND(id,mobile_phones, source, content) VALUES(306,#{mobilePhones,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR})
-2015-09-10 14:53:07 361 DEBUG [main] [saveAsMap:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(id,mobile_phones, source, content) VALUES(306,?, ?, ?) 
-2015-09-10 14:53:07 362 DEBUG [main] [saveAsMap:142] ==> Parameters: 13646874892(String), nfsq(String), test2(String)
-2015-09-10 14:53:07 383 DEBUG [main] [saveAsMap:142] <==    Updates: 1
-2015-09-10 14:53:07 396 DEBUG [main] [select:142] ==>  Preparing: SELECT 306 AS MAXID FROM DUAL 
-2015-09-10 14:53:07 396 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 14:53:07 405 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 14:53:07 564 DEBUG [main] [select:142] ==>  Preparing: SELECT SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL AS MAXID FROM DUAL 
-2015-09-10 14:53:07 565 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 14:53:07 596 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 14:53:07 609 DEBUG [main] [select:142] ==>  Preparing: SELECT SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL AS MAXID FROM DUAL 
-2015-09-10 14:53:07 610 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 14:53:07 653 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 14:53:07 655 DEBUG [main] [EntityDaoSqlProvider:334] INSERT INTO CUST_MESSAGE_WAIT_SEND(id, total_phone_number, mobile_phones, accept_time, checked, remark, source, send_num, content, status)  SELECT 307, #{param1[0].totalPhoneNumber,jdbcType=NUMERIC}, #{param1[0].mobilePhones,jdbcType=VARCHAR}, #{param1[0].acceptTime,jdbcType=DATE}, #{param1[0].checked,jdbcType=NUMERIC}, #{param1[0].remark,jdbcType=VARCHAR}, #{param1[0].source,jdbcType=VARCHAR}, #{param1[0].sendNum,jdbcType=NUMERIC}, #{param1[0].content,jdbcType=VARCHAR}, #{param1[0].status,jdbcType=INTEGER} FROM dual UNION ALL SELECT 308, #{param1[1].totalPhoneNumber,jdbcType=NUMERIC}, #{param1[1].mobilePhones,jdbcType=VARCHAR}, #{param1[1].acceptTime,jdbcType=DATE}, #{param1[1].checked,jdbcType=NUMERIC}, #{param1[1].remark,jdbcType=VARCHAR}, #{param1[1].source,jdbcType=VARCHAR}, #{param1[1].sendNum,jdbcType=NUMERIC}, #{param1[1].content,jdbcType=VARCHAR}, #{param1[1].status,jdbcType=INTEGER} FROM dual 
-2015-09-10 14:53:07 666 DEBUG [main] [saves:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(id, total_phone_number, mobile_phones, accept_time, checked, remark, source, send_num, content, status) SELECT 307, ?, ?, ?, ?, ?, ?, ?, ?, ? FROM dual UNION ALL SELECT 308, ?, ?, ?, ?, ?, ?, ?, ?, ? FROM dual 
-2015-09-10 14:53:07 671 DEBUG [main] [saves:142] ==> Parameters: null, 13646874892(String), null, null, null, nfsq(String), null, test2(String), null, null, 13646874892(String), null, null, null, nfsq(String), null, test1(String), null
-2015-09-10 14:53:07 725 DEBUG [main] [saves:142] <==    Updates: 2
-2015-09-10 14:53:07 758 DEBUG [main] [select:142] ==>  Preparing: SELECT 308 AS MAXID FROM DUAL 
-2015-09-10 14:53:07 759 DEBUG [main] [select:142] ==> Parameters: 
-2015-09-10 14:53:07 766 DEBUG [main] [select:142] <==      Total: 1
-2015-09-10 14:53:07 771 INFO  [Thread-1] [GenericApplicationContext:873] Closing org.springframework.context.support.GenericApplicationContext@1ffe63b9: startup date [Thu Sep 10 14:53:03 CST 2015]; root of context hierarchy
+2016-03-18 09:54:41 606 INFO  [main] [DefaultTestContextBootstrapper:256] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-03-18 09:54:41 648 INFO  [main] [DefaultTestContextBootstrapper:204] Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-03-18 09:54:41 653 INFO  [main] [DefaultTestContextBootstrapper:182] Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1ffe63b9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@51e5fc98, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7c469c48, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@12e61fe6]
+2016-03-18 09:54:41 861 INFO  [main] [XmlBeanDefinitionReader:317] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis-parent/honlly-mybatis/target/classes/spring/basic-spring.xml]
+2016-03-18 09:54:42 134 INFO  [main] [XmlBeanDefinitionReader:317] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis-parent/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
+2016-03-18 09:54:42 246 INFO  [main] [GenericApplicationContext:510] Refreshing org.springframework.context.support.GenericApplicationContext@481a996b: startup date [Fri Mar 18 09:54:42 CST 2016]; root of context hierarchy
+2016-03-18 09:54:42 381 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
+2016-03-18 09:54:44 356 DEBUG [main] [OracleSimpleSqlBuilder:55] INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(#{totalPhoneNumber,jdbcType=NUMERIC}, #{mobilePhones,jdbcType=VARCHAR}, #{acceptTime,jdbcType=DATE}, #{checked,jdbcType=NUMERIC}, #{remark,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL,#{sendNum,jdbcType=NUMERIC}, #{content,jdbcType=VARCHAR}, #{status,jdbcType=NUMERIC})
+2016-03-18 09:54:44 610 DEBUG [main] [save:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(?, ?, ?, ?, ?, ?, SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL,?, ?, ?) 
+2016-03-18 09:54:44 856 DEBUG [main] [save:142] ==> Parameters: 1(BigDecimal), 13646874892(String), 2016-03-18(Date), 1(BigDecimal), 备注(String), 110(String), 1(BigDecimal), 哈哈,测试,傻白甜！！！(String), 1(BigDecimal)
+2016-03-18 09:54:44 882 DEBUG [main] [save:142] <==    Updates: 1
+2016-03-18 09:54:44 893 INFO  [Thread-1] [GenericApplicationContext:862] Closing org.springframework.context.support.GenericApplicationContext@481a996b: startup date [Fri Mar 18 09:54:42 CST 2016]; root of context hierarchy
+2016-03-18 09:57:22 319 INFO  [main] [DefaultTestContextBootstrapper:256] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-03-18 09:57:22 331 INFO  [main] [DefaultTestContextBootstrapper:204] Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-03-18 09:57:22 349 INFO  [main] [DefaultTestContextBootstrapper:182] Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5dd6264, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1ffe63b9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@51e5fc98, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7c469c48]
+2016-03-18 09:57:22 546 INFO  [main] [XmlBeanDefinitionReader:317] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis-parent/honlly-mybatis/target/classes/spring/basic-spring.xml]
+2016-03-18 09:57:22 781 INFO  [main] [XmlBeanDefinitionReader:317] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis-parent/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
+2016-03-18 09:57:22 875 INFO  [main] [GenericApplicationContext:510] Refreshing org.springframework.context.support.GenericApplicationContext@27ce24aa: startup date [Fri Mar 18 09:57:22 CST 2016]; root of context hierarchy
+2016-03-18 09:57:22 984 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
+2016-03-18 09:57:24 577 DEBUG [main] [OracleSimpleSqlBuilder:55] INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(#{totalPhoneNumber,jdbcType=NUMERIC}, #{mobilePhones,jdbcType=VARCHAR}, #{acceptTime,jdbcType=DATE}, #{checked,jdbcType=NUMERIC}, #{remark,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL,#{sendNum,jdbcType=NUMERIC}, #{content,jdbcType=VARCHAR}, #{status,jdbcType=NUMERIC})
+2016-03-18 09:57:24 660 DEBUG [main] [save:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(?, ?, ?, ?, ?, ?, SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL,?, ?, ?) 
+2016-03-18 09:57:24 909 DEBUG [main] [save:142] ==> Parameters: 1(BigDecimal), 13646874892(String), 2016-03-18(Date), 1(BigDecimal), 备注(String), 110(String), 1(BigDecimal), 哈哈,测试,傻白甜！！！(String), 1(BigDecimal)
+2016-03-18 09:57:24 921 DEBUG [main] [save:142] <==    Updates: 1
+2016-03-18 09:57:24 930 INFO  [Thread-1] [GenericApplicationContext:862] Closing org.springframework.context.support.GenericApplicationContext@27ce24aa: startup date [Fri Mar 18 09:57:22 CST 2016]; root of context hierarchy
+2016-03-18 14:28:15 339 INFO  [main] [DefaultTestContextBootstrapper:256] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-03-18 14:28:15 368 INFO  [main] [DefaultTestContextBootstrapper:204] Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-03-18 14:28:15 394 INFO  [main] [DefaultTestContextBootstrapper:182] Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5dd6264, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1ffe63b9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@51e5fc98, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7c469c48]
+2016-03-18 14:28:15 643 INFO  [main] [XmlBeanDefinitionReader:317] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis-parent/honlly-mybatis/target/classes/spring/basic-spring.xml]
+2016-03-18 14:28:16 009 INFO  [main] [XmlBeanDefinitionReader:317] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis-parent/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
+2016-03-18 14:28:16 170 INFO  [main] [GenericApplicationContext:510] Refreshing org.springframework.context.support.GenericApplicationContext@27ce24aa: startup date [Fri Mar 18 14:28:16 CST 2016]; root of context hierarchy
+2016-03-18 14:28:16 309 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
+2016-03-18 14:28:17 004 WARN  [main] [GenericApplicationContext:487] Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'backIDInterceptor' defined in file [/Users/kwang89/git/Test/honlly-mybatis-parent/honlly-mybatis/target/classes/spring/mybatis-spring.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'sqlSessionFactory' of bean class [com.honlly.mybatis.interceptor.BackIDInterceptor]: Bean property 'sqlSessionFactory' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:261)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:68)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:86)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:72)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:200)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:259)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:261)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:219)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:83)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:68)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:163)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.NotWritablePropertyException: Invalid property 'sqlSessionFactory' of bean class [com.honlly.mybatis.interceptor.BackIDInterceptor]: Bean property 'sqlSessionFactory' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:1076)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:927)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:95)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:75)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1510)
+	... 41 more
+2016-03-18 14:28:17 010 ERROR [main] [TestContextManager:215] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5dd6264] to prepare test instance [com.honlly.MessageWaitSendTest@5aabbb29]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:94)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:72)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:200)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:259)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:261)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:219)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:83)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:68)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:163)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'backIDInterceptor' defined in file [/Users/kwang89/git/Test/honlly-mybatis-parent/honlly-mybatis/target/classes/spring/mybatis-spring.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'sqlSessionFactory' of bean class [com.honlly.mybatis.interceptor.BackIDInterceptor]: Bean property 'sqlSessionFactory' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:261)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:68)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:86)
+	... 25 more
+Caused by: org.springframework.beans.NotWritablePropertyException: Invalid property 'sqlSessionFactory' of bean class [com.honlly.mybatis.interceptor.BackIDInterceptor]: Bean property 'sqlSessionFactory' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:1076)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:927)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:95)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:75)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1510)
+	... 41 more
+2016-03-18 14:28:55 501 INFO  [main] [DefaultTestContextBootstrapper:256] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-03-18 14:28:55 513 INFO  [main] [DefaultTestContextBootstrapper:204] Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-03-18 14:28:55 531 INFO  [main] [DefaultTestContextBootstrapper:182] Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5dd6264, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1ffe63b9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@51e5fc98, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7c469c48]
+2016-03-18 14:28:55 697 INFO  [main] [XmlBeanDefinitionReader:317] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis-parent/honlly-mybatis/target/classes/spring/basic-spring.xml]
+2016-03-18 14:28:55 929 INFO  [main] [XmlBeanDefinitionReader:317] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis-parent/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
+2016-03-18 14:28:56 033 INFO  [main] [GenericApplicationContext:510] Refreshing org.springframework.context.support.GenericApplicationContext@27ce24aa: startup date [Fri Mar 18 14:28:56 CST 2016]; root of context hierarchy
+2016-03-18 14:28:56 140 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
+2016-03-18 14:28:57 109 DEBUG [main] [OracleSimpleSqlBuilder:55] INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(#{totalPhoneNumber,jdbcType=NUMERIC}, #{mobilePhones,jdbcType=VARCHAR}, #{acceptTime,jdbcType=DATE}, #{checked,jdbcType=NUMERIC}, #{remark,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL,#{sendNum,jdbcType=NUMERIC}, #{content,jdbcType=VARCHAR}, #{status,jdbcType=NUMERIC})
+2016-03-18 14:28:58 031 DEBUG [main] [save:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(?, ?, ?, ?, ?, ?, SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL,?, ?, ?) 
+2016-03-18 14:28:58 262 DEBUG [main] [save:142] ==> Parameters: 1(BigDecimal), 13646874892(String), 2016-03-18(Date), 1(BigDecimal), 备注(String), 110(String), 1(BigDecimal), 哈哈,测试,傻白甜！！！(String), 1(BigDecimal)
+2016-03-18 14:28:58 280 DEBUG [main] [save:142] <==    Updates: 1
+2016-03-18 18:42:04 073 INFO  [main] [DefaultTestContextBootstrapper:256] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-03-18 18:42:04 091 INFO  [main] [DefaultTestContextBootstrapper:204] Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-03-18 18:42:04 124 INFO  [main] [DefaultTestContextBootstrapper:182] Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5dd6264, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1ffe63b9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@51e5fc98, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7c469c48]
+2016-03-18 18:42:04 361 INFO  [main] [XmlBeanDefinitionReader:317] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis-parent/honlly-mybatis/target/classes/spring/basic-spring.xml]
+2016-03-18 18:42:04 644 INFO  [main] [XmlBeanDefinitionReader:317] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis-parent/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
+2016-03-18 18:42:04 759 INFO  [main] [GenericApplicationContext:510] Refreshing org.springframework.context.support.GenericApplicationContext@27ce24aa: startup date [Fri Mar 18 18:42:04 CST 2016]; root of context hierarchy
+2016-03-18 18:42:04 886 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
+2016-03-18 18:42:05 954 DEBUG [main] [OracleSimpleSqlBuilder:55] INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(#{totalPhoneNumber,jdbcType=NUMERIC}, #{mobilePhones,jdbcType=VARCHAR}, #{acceptTime,jdbcType=DATE}, #{checked,jdbcType=NUMERIC}, #{remark,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL,#{sendNum,jdbcType=NUMERIC}, #{content,jdbcType=VARCHAR}, #{status,jdbcType=NUMERIC})
+2016-03-18 18:42:06 829 DEBUG [main] [save:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(?, ?, ?, ?, ?, ?, SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL,?, ?, ?) 
+2016-03-18 18:42:07 052 DEBUG [main] [save:142] ==> Parameters: 1(BigDecimal), 13646874892(String), 2016-03-18(Date), 1(BigDecimal), 备注(String), 110(String), 1(BigDecimal), 哈哈,测试,傻白甜！！！(String), 1(BigDecimal)
+2016-03-18 18:42:07 066 DEBUG [main] [save:142] <==    Updates: 1
+2016-03-18 18:52:14 557 INFO  [main] [DefaultTestContextBootstrapper:256] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-03-18 18:52:14 586 INFO  [main] [DefaultTestContextBootstrapper:204] Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-03-18 18:52:14 611 INFO  [main] [DefaultTestContextBootstrapper:182] Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5dd6264, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1ffe63b9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@51e5fc98, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7c469c48]
+2016-03-18 18:52:14 793 INFO  [main] [XmlBeanDefinitionReader:317] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis-parent/honlly-mybatis/target/classes/spring/basic-spring.xml]
+2016-03-18 18:52:15 028 INFO  [main] [XmlBeanDefinitionReader:317] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis-parent/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
+2016-03-18 18:52:15 124 INFO  [main] [GenericApplicationContext:510] Refreshing org.springframework.context.support.GenericApplicationContext@27ce24aa: startup date [Fri Mar 18 18:52:15 CST 2016]; root of context hierarchy
+2016-03-18 18:52:15 235 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
+2016-03-18 18:52:16 161 DEBUG [main] [OracleSimpleSqlBuilder:55] INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(#{totalPhoneNumber,jdbcType=NUMERIC}, #{mobilePhones,jdbcType=VARCHAR}, #{acceptTime,jdbcType=DATE}, #{checked,jdbcType=NUMERIC}, #{remark,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL,#{sendNum,jdbcType=NUMERIC}, #{content,jdbcType=VARCHAR}, #{status,jdbcType=NUMERIC})
+2016-03-18 18:52:17 051 DEBUG [main] [save:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(?, ?, ?, ?, ?, ?, SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL,?, ?, ?) 
+2016-03-18 18:52:17 275 DEBUG [main] [save:142] ==> Parameters: 1(BigDecimal), 13646874892(String), 2016-03-18(Date), 1(BigDecimal), 备注(String), 110(String), 1(BigDecimal), 哈哈,测试,傻白甜！！！(String), 1(BigDecimal)
+2016-03-18 18:52:17 288 DEBUG [main] [save:142] <==    Updates: 1
+2016-03-18 18:52:17 297 INFO  [Thread-1] [GenericApplicationContext:862] Closing org.springframework.context.support.GenericApplicationContext@27ce24aa: startup date [Fri Mar 18 18:52:15 CST 2016]; root of context hierarchy
+2016-03-18 18:53:34 866 INFO  [main] [DefaultTestContextBootstrapper:256] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-03-18 18:53:34 879 INFO  [main] [DefaultTestContextBootstrapper:204] Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-03-18 18:53:34 901 INFO  [main] [DefaultTestContextBootstrapper:182] Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5dd6264, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1ffe63b9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@51e5fc98, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7c469c48]
+2016-03-18 18:53:35 083 INFO  [main] [XmlBeanDefinitionReader:317] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis-parent/honlly-mybatis/target/classes/spring/basic-spring.xml]
+2016-03-18 18:53:35 287 INFO  [main] [XmlBeanDefinitionReader:317] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis-parent/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
+2016-03-18 18:53:35 395 INFO  [main] [GenericApplicationContext:510] Refreshing org.springframework.context.support.GenericApplicationContext@27ce24aa: startup date [Fri Mar 18 18:53:35 CST 2016]; root of context hierarchy
+2016-03-18 18:53:35 549 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
+2016-03-18 18:53:36 409 DEBUG [main] [OracleSimpleSqlBuilder:55] INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(#{totalPhoneNumber,jdbcType=NUMERIC}, #{mobilePhones,jdbcType=VARCHAR}, #{acceptTime,jdbcType=DATE}, #{checked,jdbcType=NUMERIC}, #{remark,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL,#{sendNum,jdbcType=NUMERIC}, #{content,jdbcType=VARCHAR}, #{status,jdbcType=NUMERIC})
+2016-03-18 18:53:37 208 DEBUG [main] [save:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(?, ?, ?, ?, ?, ?, SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL,?, ?, ?) 
+2016-03-18 18:53:37 433 DEBUG [main] [save:142] ==> Parameters: 1(BigDecimal), 13646874892(String), 2016-03-18(Date), 1(BigDecimal), 备注(String), 110(String), 1(BigDecimal), 哈哈,测试,傻白甜！！！(String), 1(BigDecimal)
+2016-03-18 18:53:37 443 DEBUG [main] [save:142] <==    Updates: 1
+2016-03-18 18:53:37 452 INFO  [Thread-1] [GenericApplicationContext:862] Closing org.springframework.context.support.GenericApplicationContext@27ce24aa: startup date [Fri Mar 18 18:53:35 CST 2016]; root of context hierarchy
+2016-03-18 18:54:32 091 INFO  [main] [DefaultTestContextBootstrapper:256] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-03-18 18:54:32 105 INFO  [main] [DefaultTestContextBootstrapper:204] Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-03-18 18:54:32 122 INFO  [main] [DefaultTestContextBootstrapper:182] Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5dd6264, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1ffe63b9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@51e5fc98, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7c469c48]
+2016-03-18 18:54:32 295 INFO  [main] [XmlBeanDefinitionReader:317] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis-parent/honlly-mybatis/target/classes/spring/basic-spring.xml]
+2016-03-18 18:54:32 519 INFO  [main] [XmlBeanDefinitionReader:317] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis-parent/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
+2016-03-18 18:54:32 619 INFO  [main] [GenericApplicationContext:510] Refreshing org.springframework.context.support.GenericApplicationContext@27ce24aa: startup date [Fri Mar 18 18:54:32 CST 2016]; root of context hierarchy
+2016-03-18 18:54:32 726 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
+2016-03-18 18:54:33 579 DEBUG [main] [OracleSimpleSqlBuilder:55] INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(#{totalPhoneNumber,jdbcType=NUMERIC}, #{mobilePhones,jdbcType=VARCHAR}, #{acceptTime,jdbcType=DATE}, #{checked,jdbcType=NUMERIC}, #{remark,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL,#{sendNum,jdbcType=NUMERIC}, #{content,jdbcType=VARCHAR}, #{status,jdbcType=NUMERIC})
+2016-03-18 18:54:34 415 DEBUG [main] [save:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(?, ?, ?, ?, ?, ?, SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL,?, ?, ?) 
+2016-03-18 18:54:34 648 DEBUG [main] [save:142] ==> Parameters: 1(BigDecimal), 13646874892(String), 2016-03-18(Date), 1(BigDecimal), 备注(String), 110(String), 1(BigDecimal), 哈哈,测试,傻白甜！！！(String), 1(BigDecimal)
+2016-03-18 18:54:34 675 DEBUG [main] [save:142] <==    Updates: 1
+2016-03-18 18:54:34 683 INFO  [Thread-1] [GenericApplicationContext:862] Closing org.springframework.context.support.GenericApplicationContext@27ce24aa: startup date [Fri Mar 18 18:54:32 CST 2016]; root of context hierarchy
+2016-03-18 18:56:52 196 INFO  [main] [DefaultTestContextBootstrapper:256] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-03-18 18:56:52 208 INFO  [main] [DefaultTestContextBootstrapper:204] Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-03-18 18:56:52 238 INFO  [main] [DefaultTestContextBootstrapper:182] Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1a04f701, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4e91d63f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@d4342c2, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2bbf180e]
+2016-03-18 18:56:52 406 INFO  [main] [XmlBeanDefinitionReader:317] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis-parent/honlly-mybatis/target/classes/spring/basic-spring.xml]
+2016-03-18 18:56:52 652 INFO  [main] [XmlBeanDefinitionReader:317] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis-parent/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
+2016-03-18 18:56:52 747 INFO  [main] [GenericApplicationContext:510] Refreshing org.springframework.context.support.GenericApplicationContext@4ac3c60d: startup date [Fri Mar 18 18:56:52 CST 2016]; root of context hierarchy
+2016-03-18 18:56:52 860 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
+2016-03-18 18:56:53 637 DEBUG [main] [OracleSimpleSqlBuilder:55] INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(#{totalPhoneNumber,jdbcType=NUMERIC}, #{mobilePhones,jdbcType=VARCHAR}, #{acceptTime,jdbcType=DATE}, #{checked,jdbcType=NUMERIC}, #{remark,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL,#{sendNum,jdbcType=NUMERIC}, #{content,jdbcType=VARCHAR}, #{status,jdbcType=NUMERIC})
+2016-03-18 18:56:54 431 DEBUG [main] [save:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(?, ?, ?, ?, ?, ?, SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL,?, ?, ?) 
+2016-03-18 18:56:54 645 DEBUG [main] [save:142] ==> Parameters: 1(BigDecimal), 13646874892(String), 2016-03-18(Date), 1(BigDecimal), 备注(String), 110(String), 1(BigDecimal), 哈哈,测试,傻白甜！！！(String), 1(BigDecimal)
+2016-03-18 18:56:54 658 DEBUG [main] [save:142] <==    Updates: 1
+2016-03-18 18:59:13 119 INFO  [Thread-1] [GenericApplicationContext:862] Closing org.springframework.context.support.GenericApplicationContext@4ac3c60d: startup date [Fri Mar 18 18:56:52 CST 2016]; root of context hierarchy
+2016-03-18 19:18:27 713 INFO  [main] [DefaultTestContextBootstrapper:256] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-03-18 19:18:27 727 INFO  [main] [DefaultTestContextBootstrapper:204] Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-03-18 19:18:27 751 INFO  [main] [DefaultTestContextBootstrapper:182] Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5dd6264, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1ffe63b9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@51e5fc98, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7c469c48]
+2016-03-18 19:18:27 947 INFO  [main] [XmlBeanDefinitionReader:317] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis-parent/honlly-mybatis/target/classes/spring/basic-spring.xml]
+2016-03-18 19:18:28 207 INFO  [main] [XmlBeanDefinitionReader:317] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis-parent/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
+2016-03-18 19:18:28 314 INFO  [main] [GenericApplicationContext:510] Refreshing org.springframework.context.support.GenericApplicationContext@27ce24aa: startup date [Fri Mar 18 19:18:28 CST 2016]; root of context hierarchy
+2016-03-18 19:18:28 422 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
+2016-03-18 19:18:29 309 DEBUG [main] [OracleSimpleSqlBuilder:55] INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(#{totalPhoneNumber,jdbcType=NUMERIC}, #{mobilePhones,jdbcType=VARCHAR}, #{acceptTime,jdbcType=DATE}, #{checked,jdbcType=NUMERIC}, #{remark,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL,#{sendNum,jdbcType=NUMERIC}, #{content,jdbcType=VARCHAR}, #{status,jdbcType=NUMERIC})
+2016-03-18 19:18:30 127 DEBUG [main] [save:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(?, ?, ?, ?, ?, ?, SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL,?, ?, ?) 
+2016-03-18 19:18:30 360 DEBUG [main] [save:142] ==> Parameters: 1(BigDecimal), 13646874892(String), 2016-03-18(Date), 1(BigDecimal), 备注(String), 110(String), 1(BigDecimal), 哈哈,测试,傻白甜！！！(String), 1(BigDecimal)
+2016-03-18 19:18:30 371 DEBUG [main] [save:142] <==    Updates: 1
+2016-03-18 19:18:30 379 DEBUG [main] [execute:142] ==>  Preparing: SELECT LAST_NUMBER-INCREMENT_BY AS MAXID FROM USER_SEQUENCES WHERE SEQUENCE_NAME='SEQ_CUST_MESSAGE_WAIT_SEND' 
+2016-03-18 19:18:30 379 DEBUG [main] [execute:142] ==> Parameters: 
+2016-03-18 19:18:30 499 DEBUG [main] [execute:142] <==      Total: 1
+2016-03-18 19:18:30 508 INFO  [Thread-1] [GenericApplicationContext:862] Closing org.springframework.context.support.GenericApplicationContext@27ce24aa: startup date [Fri Mar 18 19:18:28 CST 2016]; root of context hierarchy
+2016-03-18 19:19:04 438 INFO  [main] [DefaultTestContextBootstrapper:256] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-03-18 19:19:04 458 INFO  [main] [DefaultTestContextBootstrapper:204] Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-03-18 19:19:04 479 INFO  [main] [DefaultTestContextBootstrapper:182] Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5dd6264, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1ffe63b9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@51e5fc98, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7c469c48]
+2016-03-18 19:19:04 685 INFO  [main] [XmlBeanDefinitionReader:317] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis-parent/honlly-mybatis/target/classes/spring/basic-spring.xml]
+2016-03-18 19:19:04 909 INFO  [main] [XmlBeanDefinitionReader:317] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis-parent/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
+2016-03-18 19:19:05 024 INFO  [main] [GenericApplicationContext:510] Refreshing org.springframework.context.support.GenericApplicationContext@27ce24aa: startup date [Fri Mar 18 19:19:05 CST 2016]; root of context hierarchy
+2016-03-18 19:19:05 152 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
+2016-03-18 19:19:06 023 DEBUG [main] [OracleSimpleSqlBuilder:55] INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(#{totalPhoneNumber,jdbcType=NUMERIC}, #{mobilePhones,jdbcType=VARCHAR}, #{acceptTime,jdbcType=DATE}, #{checked,jdbcType=NUMERIC}, #{remark,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL,#{sendNum,jdbcType=NUMERIC}, #{content,jdbcType=VARCHAR}, #{status,jdbcType=NUMERIC})
+2016-03-18 19:19:06 783 DEBUG [main] [save:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(?, ?, ?, ?, ?, ?, SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL,?, ?, ?) 
+2016-03-18 19:19:07 019 DEBUG [main] [save:142] ==> Parameters: 1(BigDecimal), 13646874892(String), 2016-03-18(Date), 1(BigDecimal), 备注(String), 110(String), 1(BigDecimal), 哈哈,测试,傻白甜！！！(String), 1(BigDecimal)
+2016-03-18 19:19:07 040 DEBUG [main] [save:142] <==    Updates: 1
+2016-03-18 19:19:07 048 DEBUG [main] [execute:142] ==>  Preparing: SELECT LAST_NUMBER-INCREMENT_BY AS MAXID FROM USER_SEQUENCES WHERE SEQUENCE_NAME='SEQ_CUST_MESSAGE_WAIT_SEND' 
+2016-03-18 19:19:07 048 DEBUG [main] [execute:142] ==> Parameters: 
+2016-03-18 19:19:07 165 DEBUG [main] [execute:142] <==      Total: 1
+2016-03-18 19:22:13 692 INFO  [main] [DefaultTestContextBootstrapper:256] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-03-18 19:22:13 703 INFO  [main] [DefaultTestContextBootstrapper:204] Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-03-18 19:22:13 722 INFO  [main] [DefaultTestContextBootstrapper:182] Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5dd6264, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1ffe63b9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@51e5fc98, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7c469c48]
+2016-03-18 19:22:13 875 INFO  [main] [XmlBeanDefinitionReader:317] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis-parent/honlly-mybatis/target/classes/spring/basic-spring.xml]
+2016-03-18 19:22:14 118 INFO  [main] [XmlBeanDefinitionReader:317] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis-parent/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
+2016-03-18 19:22:14 203 INFO  [main] [GenericApplicationContext:510] Refreshing org.springframework.context.support.GenericApplicationContext@27ce24aa: startup date [Fri Mar 18 19:22:14 CST 2016]; root of context hierarchy
+2016-03-18 19:22:14 298 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
+2016-03-18 19:22:15 218 DEBUG [main] [OracleSimpleSqlBuilder:55] INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(#{totalPhoneNumber,jdbcType=NUMERIC}, #{mobilePhones,jdbcType=VARCHAR}, #{acceptTime,jdbcType=DATE}, #{checked,jdbcType=NUMERIC}, #{remark,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL,#{sendNum,jdbcType=NUMERIC}, #{content,jdbcType=VARCHAR}, #{status,jdbcType=NUMERIC})
+2016-03-18 19:22:16 246 DEBUG [main] [save:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(?, ?, ?, ?, ?, ?, SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL,?, ?, ?) 
+2016-03-18 19:22:16 469 DEBUG [main] [save:142] ==> Parameters: 1(BigDecimal), 13646874892(String), 2016-03-18(Date), 1(BigDecimal), 备注(String), 110(String), 1(BigDecimal), 哈哈,测试,傻白甜！！！(String), 1(BigDecimal)
+2016-03-18 19:22:16 480 DEBUG [main] [save:142] <==    Updates: 1
+2016-03-18 19:24:51 090 INFO  [main] [DefaultTestContextBootstrapper:256] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-03-18 19:24:51 103 INFO  [main] [DefaultTestContextBootstrapper:204] Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-03-18 19:24:51 125 INFO  [main] [DefaultTestContextBootstrapper:182] Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5dd6264, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1ffe63b9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@51e5fc98, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7c469c48]
+2016-03-18 19:24:51 314 INFO  [main] [XmlBeanDefinitionReader:317] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis-parent/honlly-mybatis/target/classes/spring/basic-spring.xml]
+2016-03-18 19:24:51 534 INFO  [main] [XmlBeanDefinitionReader:317] Loading XML bean definitions from file [/Users/kwang89/git/Test/honlly-mybatis-parent/honlly-mybatis/target/classes/spring/mybatis-spring.xml]
+2016-03-18 19:24:51 615 INFO  [main] [GenericApplicationContext:510] Refreshing org.springframework.context.support.GenericApplicationContext@27ce24aa: startup date [Fri Mar 18 19:24:51 CST 2016]; root of context hierarchy
+2016-03-18 19:24:51 715 INFO  [main] [PropertySourcesPlaceholderConfigurer:172] Loading properties file from class path resource [mybatis.properties]
+2016-03-18 19:24:52 516 DEBUG [main] [OracleSimpleSqlBuilder:55] INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(#{totalPhoneNumber,jdbcType=NUMERIC}, #{mobilePhones,jdbcType=VARCHAR}, #{acceptTime,jdbcType=DATE}, #{checked,jdbcType=NUMERIC}, #{remark,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL,#{sendNum,jdbcType=NUMERIC}, #{content,jdbcType=VARCHAR}, #{status,jdbcType=NUMERIC})
+2016-03-18 19:24:53 521 DEBUG [main] [save:142] ==>  Preparing: INSERT INTO CUST_MESSAGE_WAIT_SEND(total_phone_number, mobile_phones, accept_time, checked, remark, source, id, send_num, content, status) VALUES(?, ?, ?, ?, ?, ?, SEQ_CUST_MESSAGE_WAIT_SEND.NEXTVAL,?, ?, ?) 
+2016-03-18 19:24:53 736 DEBUG [main] [save:142] ==> Parameters: 1(BigDecimal), 13646874892(String), 2016-03-18(Date), 1(BigDecimal), 备注(String), 110(String), 1(BigDecimal), 哈哈,测试,傻白甜！！！(String), 1(BigDecimal)
+2016-03-18 19:24:53 750 DEBUG [main] [save:142] <==    Updates: 1
+2016-03-18 19:25:09 921 DEBUG [main] [execute:142] ==>  Preparing: SELECT LAST_NUMBER-INCREMENT_BY AS MAXID FROM USER_SEQUENCES WHERE SEQUENCE_NAME='SEQ_CUST_MESSAGE_WAIT_SEND' 
+2016-03-18 19:25:09 923 DEBUG [main] [execute:142] ==> Parameters: 
+2016-03-18 19:25:10 266 DEBUG [main] [execute:142] <==      Total: 1
+2016-03-18 19:25:44 277 INFO  [Thread-1] [GenericApplicationContext:862] Closing org.springframework.context.support.GenericApplicationContext@27ce24aa: startup date [Fri Mar 18 19:24:51 CST 2016]; root of context hierarchy

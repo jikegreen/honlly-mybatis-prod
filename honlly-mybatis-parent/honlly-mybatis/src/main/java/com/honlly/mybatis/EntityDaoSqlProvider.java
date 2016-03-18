@@ -31,6 +31,7 @@ public class EntityDaoSqlProvider implements SqlComponent {
 	/**
 	 * 方法名常量，用于EntityDao中的注解
 	 */
+	public static final String method_execute = "execute";
 	/** @see #getById(Long) */
 	public static final String method_getById = "getById";
 	/** @see #get(Map) */
@@ -190,6 +191,10 @@ public class EntityDaoSqlProvider implements SqlComponent {
 		Class<? extends Entity> entityClass = (Class<? extends Entity>)ClassUtils.getActualTypeArguments(EntityDao.class, entityDaoClass)[0];
 		entityClassCache.put(className, entityClass);
 		return entityClass;
+	}
+	
+	public String execute(String sql) {
+		return sql;
 	}
 
 	public String getById(Long id) {

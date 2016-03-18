@@ -15,13 +15,4 @@
 
 	<context:component-scan base-package="com.honlly" />
 	
-	<context:property-placeholder ignore-unresolvable="true" file-encoding="UTF-8" location="classpath:system.properties" />
-
-	<bean id="config" class="com.honlly.entity.domain.Config">
-		<property name="rootPackage" value="${rootPackage}" />
-		<property name="author" value="${author}" />
-		<property name="ignoreTablePrefix" value="${ignoreTablePrefix}" />
-		<property name="tableNames" value="${tableNames}" />
-	</bean>
-
 </beans>
