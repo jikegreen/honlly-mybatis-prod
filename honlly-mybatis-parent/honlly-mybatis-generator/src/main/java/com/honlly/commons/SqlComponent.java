@@ -18,6 +18,10 @@ public interface SqlComponent {
 	public static final String LEFT_BRACE = "(";
 	/** 右括号 */
 	public static final String RIGHT_BRACE = ")";
+	/** 虚表 */
+	public static final String DUAL = "DUAL";
+	/** 单引号 */
+	public static final String SINGLE_QUOTE = "'";
 
 	/**
 	 * 操作符

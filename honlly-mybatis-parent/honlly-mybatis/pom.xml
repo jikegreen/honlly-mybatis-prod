@@ -7,6 +7,5 @@
 		<groupId>com.honlly</groupId>
 		<artifactId>honlly-mybatis-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>../honlly-mybatis-parent</relativePath>
 	</parent>
 </project>

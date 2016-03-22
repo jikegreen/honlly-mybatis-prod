@@ -9,6 +9,7 @@ public class Config extends BaseBean {
 	private String author;
 	private String ignoreTablePrefix;
 	private String tableNames;
+	private String user;
 
 	public String getRootPackage() {
 		return rootPackage;
@@ -40,6 +41,14 @@ public class Config extends BaseBean {
 
 	public void setTableNames(String tableNames) {
 		this.tableNames = tableNames;
+	}
+
+	public String getUser() {
+		return user;
+	}
+
+	public void setUser(String user) {
+		this.user = user;
 	}
 
 }

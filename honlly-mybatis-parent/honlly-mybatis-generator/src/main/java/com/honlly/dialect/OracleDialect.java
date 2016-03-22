@@ -27,6 +27,8 @@ public class OracleDialect extends Dialect {
 	/** 数据库类型映射 */
 	private static final Map<String, Integer> dbTypeMapping;
 	
+	private String[] users = {};
+	
 	static {
 		Map<Integer, String> jdbcMap = new HashMap<Integer, String>();
 		jdbcMap.put(Types.CHAR, "CHAR");
@@ -108,10 +110,21 @@ public class OracleDialect extends Dialect {
 //				.append("t.data_default").append(SPACE).append(AS).append(SPACE).append(META_COLUMN_DEFAULT).append(COMMA).append(SPACE)
 				.append("t.column_id").append(SPACE).append(AS).append(SPACE).append(META_COLUMN_KEY).append(COMMA).append(SPACE)
 				.append("c.comments").append(SPACE).append(AS).append(SPACE).append(META_COLUMN_COMMENT).append(SPACE)
-				.append(FROM).append(SPACE).append("user_tab_columns").append(SPACE).append("t").append(SPACE)
-				.append(JOIN).append(SPACE).append("user_col_comments").append(SPACE).append("c").append(SPACE)
+				.append(FROM).append(SPACE).append("all_tab_columns").append(SPACE).append("t").append(SPACE)
+				.append(JOIN).append(SPACE).append("all_col_comments").append(SPACE).append("c").append(SPACE)
 				.append(ON).append(SPACE).append("t.table_name").append(SPACE).append(EQ).append(SPACE).append("c.table_name").append(SPACE)
 				.append(AND).append(SPACE).append("t.column_name").append(SPACE).append(EQ).append(SPACE).append("c.column_name").append(SPACE)
+				.append(AND).append(SPACE).append("t.owner").append(SPACE).append(IN).append(LEFT_BRACE).append(SINGLE_QUOTE);
+				if(users.length>0){
+					for (String temp : users) {
+						sqlBuilder.append(temp).append(COMMA);
+					}
+					sqlBuilder.deleteCharAt(sqlBuilder.length()-1);
+				}else{
+					//当前用户
+					sqlBuilder.append(SELECT).append(SPACE).append("user").append(SPACE).append(FROM).append(SPACE).append(DUAL);
+				}
+				sqlBuilder.append(SINGLE_QUOTE).append(RIGHT_BRACE).append(SPACE)
 				.append(ORDER_BY).append(SPACE).append("t.table_name");
 		return sqlBuilder.toString();
 	}
@@ -148,6 +161,10 @@ public class OracleDialect extends Dialect {
 			Entity temp = it.next();
 			temp.setId(++start);
 		}
+	}
+
+	public void setUsers(String[] users) {
+		this.users = users;
 	}
 
 }

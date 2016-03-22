@@ -22,6 +22,7 @@
 		<property name="author" value="${author}" />
 		<property name="ignoreTablePrefix" value="${ignoreTablePrefix}" />
 		<property name="tableNames" value="${tableNames}" />
+		<property name="user" value="${dbuser}" />
 	</bean>
 
 </beans>

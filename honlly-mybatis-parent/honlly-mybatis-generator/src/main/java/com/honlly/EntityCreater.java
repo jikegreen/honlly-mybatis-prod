@@ -80,7 +80,9 @@ public class EntityCreater implements InitializingBean {
 		}
 		dialect = provider.getSqlSessionFactory().getConfiguration().getEnvironment().getDataSource().getConnection().getMetaData().getDatabaseProductName();
 		if("oracle".equalsIgnoreCase(dialect)){
-			provider.setDialect(new OracleDialect());
+			OracleDialect oracleDialect = new OracleDialect();
+			oracleDialect.setUsers(config.getUser().split(","));
+			provider.setDialect(oracleDialect);
 		}else if("mysql".equalsIgnoreCase(dialect)){
 			provider.setDialect(new MySQLDialect());
 		}else{
