@@ -58,15 +58,14 @@ public class OracleSimpleSqlBuilder<S extends Entity> extends SimpleSqlBuilder<S
 	
 	@Override
 	public String getBatchInsertSql(List<Entity> entitys, Long... ids) {
-		StringBuilder sb = new StringBuilder(INSERT_INTO + SPACE).append(tableName).append(LEFT_BRACE).append(idField);
-		StringBuilder[] sb2s = new StringBuilder[entitys.size()];
-		String lastSeq = null;
-		for (int i = 0; i < sb2s.length; i++) {
+		StringBuilder sb = new StringBuilder(INSERT_INTO).append(SPACE).append(tableName).append(LEFT_BRACE).append(idField);
+		StringBuilder[] sb2 = new StringBuilder[entitys.size()];
+		StringBuilder sb3 = new StringBuilder(LEFT_BRACE);
+		for (int i = 0; i < sb2.length; i++) {
 			if(!entitys.get(i).isTransient()) {
 				throw new ExecutorException("The record " + entitys.get(i) + " is exist!");
 			}
-			lastSeq = getNextVal();
-			sb2s[i] = new StringBuilder(SPACE).append(SELECT).append(SPACE).append(lastSeq);
+			sb2[i] = new StringBuilder(SPACE).append(SELECT).append(SPACE);
 		}
 		for (Entry<String, String> entry : fieldColumnMapping.entrySet()) {
 			String field = entry.getKey();
@@ -74,17 +73,17 @@ public class OracleSimpleSqlBuilder<S extends Entity> extends SimpleSqlBuilder<S
 				continue;
 			}
 			sb.append(COMMA + SPACE).append(entry.getValue());
-			for (int i = 0; i < sb2s.length; i++) {
-				sb2s[i].append(COMMA + SPACE).append("#{param1["+i+"].").append(field).append(",").append("jdbcType=").append(Dialect.get(fieldJdbcTypeMapping.get(field))).append("}");
+			for (int i = 0; i < sb2.length; i++) {
+				sb2[i].append("#{param1["+i+"].").append(field).append(",").append("jdbcType=").append(Dialect.get(fieldJdbcTypeMapping.get(field))).append("}").append(COMMA + SPACE);
 			}
 		}
-		sb.append(RIGHT_BRACE + SPACE);
-		for (int i = 0; i < sb2s.length; i++) {
-			sb2s[i].append(SPACE).append(FROM).append(SPACE).append("DUAL").append(SPACE).append(UNION_ALL);
-			sb.append(sb2s[i]);
+		sb.append(RIGHT_BRACE + SPACE).append(SELECT).append(SPACE).append(getNextVal()).append(COMMA).append("t.*").append(SPACE).append(FROM).append(SPACE);
+		for (int i = 0; i < sb2.length; i++) {
+			sb2[i].delete(sb2[i].lastIndexOf(COMMA), sb2[i].length()).append(SPACE).append(FROM).append(SPACE).append("DUAL").append(SPACE).append(UNION_ALL);
+			sb3.append(sb2[i]).append(SPACE);
 		}
-		sb.delete(sb.lastIndexOf(UNION_ALL), sb.length());
-		return sb.toString();
+		sb3.delete(sb3.lastIndexOf(UNION_ALL), sb3.length()).append(RIGHT_BRACE).append(SPACE).append("t");
+		return sb.append(sb3).toString();
 	}
 	
 	@Override
