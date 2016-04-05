@@ -11,12 +11,15 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
+import org.apache.commons.collections.CollectionUtils;
+import org.apache.ibatis.executor.ExecutorException;
 import org.apache.log4j.Logger;
 
 import com.honlly.mybatis.Entity;
 import com.honlly.mybatis.EntityAnnotationParser;
 import com.honlly.mybatis.SqlComponent;
 import com.honlly.mybatis.annotation.Column;
+import com.honlly.mybatis.dialect.Dialect;
 import com.honlly.mybatis.utils.DbFieldUtils;
 
 /**
@@ -146,7 +149,7 @@ public abstract class SimpleSqlBuilder<E extends Entity> implements SqlComponent
 				continue;
 			}
 			hasUpdateField = true;
-			sb.append(" ").append(fieldColumnMapping.get(field)).append(" = ").append("#{").append(field).append("}").append(",");
+			sb.append(" ").append(fieldColumnMapping.get(field)).append(" = ").append("#{").append(field).append(",").append("jdbcType=").append(Dialect.get(fieldJdbcTypeMapping.get(field))).append("}").append(",");
 		}
 		if(hasUpdateField) {
 			sb.deleteCharAt(sb.length()-1);
@@ -180,7 +183,7 @@ public abstract class SimpleSqlBuilder<E extends Entity> implements SqlComponent
 			} catch (Exception e) {
 				throw new RuntimeException(e);
 			}
-			sb.append(entry.getValue()).append(" = ").append("#{").append(paramKey).append(field).append("} AND ");
+			sb.append(entry.getValue()).append(" = ").append("#{").append(paramKey).append(field).append(",").append("jdbcType=").append(Dialect.get(fieldJdbcTypeMapping.get(field))).append("} AND ");
 		}
 		if(sb.length() > 0) {
 			sb.delete(sb.length()-5, sb.length());
@@ -202,6 +205,52 @@ public abstract class SimpleSqlBuilder<E extends Entity> implements SqlComponent
 			fieldSet.add(field);
 		}
 		return fieldSet;
+	}
+	
+	public String getUpdatesSql(List<Entity> entitys){
+		if(CollectionUtils.isEmpty(entitys)) {
+			return null;
+		}
+		for (Entity entity : entitys) {
+			if(entity.isTransient()) {
+				throw new ExecutorException("The record " + entity + " is transient!");
+			}
+		}
+		String idField = entityAnnotationParser.getIdField().getName();
+		String idColumn = entityAnnotationParser.getFieldColumnMapping().get(entityAnnotationParser.getIdField());
+		StringBuilder sb = new StringBuilder(UPDATE + SPACE).append(entityAnnotationParser.getTableName()).append(SPACE + SET);
+		boolean hasUpdateField = false;
+		for (Entry<Field, String> entry : entityAnnotationParser.getFieldColumnMapping().entrySet()) {
+			String field = entry.getKey().getName();
+			if(field.equals(idField)) {
+				continue;
+			}
+			hasUpdateField = true;
+			sb.append(SPACE).append(entry.getValue()).append(SPACE + EQ + SPACE + CASE + SPACE);
+			for (int i = 0; i < entitys.size(); i++) {
+				sb.append(WHEN + SPACE).append(idColumn).append(SPACE + EQ + SPACE).append("#{param1["+i+"].").append(idField).append("}").append(SPACE + THEN + SPACE).append("#{param1["+i+"].").append(field).append(",").append("jdbcType=").append(Dialect.get(fieldJdbcTypeMapping.get(field))).append("}").append(SPACE);
+			}
+			sb.append(END + COMMA);
+		}
+		if(hasUpdateField) {
+			sb.deleteCharAt(sb.length()-1);
+		}
+		sb.append(SPACE + WHERE);
+		for (int i = 0; i < entitys.size(); i++) {
+			sb.append(SPACE).append(idColumn).append(SPACE + EQ + SPACE).append("#{param1["+i+"].").append(idField).append("}").append(SPACE + OR);
+		}
+		return sb.delete(sb.length()-3, sb.length()).toString();
+	}
+	
+	public StringBuilder getUpdateAsMapSql(Map<String, Object> fieldParamMapping){
+		StringBuilder sql = new StringBuilder(UPDATE + SPACE).append(entityAnnotationParser.getTableName()).append(SPACE + SET);
+		for (String field : fieldParamMapping.keySet()) {
+			if(!entityAnnotationParser.getFieldMapping().containsKey(field) || field.equals(entityAnnotationParser.getIdField().getName())) {
+				continue;
+			}
+			sql.append(SPACE).append(entityAnnotationParser.getFieldColumnMapping().get(entityAnnotationParser.getFieldMapping().get(field))).append(SPACE + EQ + SPACE).append("#{param2.").append(field).append(",").append("jdbcType=").append(Dialect.get(fieldJdbcTypeMapping.get(field))).append("}").append(COMMA);
+		}
+		return sql.deleteCharAt(sql.length()-1);
 	}
 	
 	public abstract String getBatchInsertSql(List<Entity> entitys,Long... ids);

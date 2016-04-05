@@ -114,14 +114,14 @@ public class MessageWaitSendTest extends BaseTest {
 	@Test
 	public void updateAsMap(){
 		MessageWaitSend entity = new MessageWaitSend();
-		entity.setId(284L);
-		MessageWaitSend entity1 = messageWaitSendDao.getById(284L);
+		entity.setId(290L);
+		MessageWaitSend entity1 = messageWaitSendDao.getById(290L);
 		Map<String, Object> params = new HashMap<>();
 		params.put(MessageWaitSendMeta.content, "updateAsMap - 哈哈,测试,傻白甜！！！");
 		params.put(MessageWaitSendMeta.acceptTime, new Date());
 		System.out.println("更新前:" + entity1.getContent());
 		messageWaitSendDao.updateAsMap(entity,params);
-		MessageWaitSend entity2 = messageWaitSendDao.getById(284L);
+		MessageWaitSend entity2 = messageWaitSendDao.getById(290L);
 		System.out.println("更新后:" + entity2.getContent());
 	}
 	

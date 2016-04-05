@@ -1,10 +1,8 @@
 package com.honlly.mybatis;
 
-import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.apache.commons.collections.CollectionUtils;
@@ -265,14 +263,7 @@ public class EntityDaoSqlProvider implements SqlComponent {
 		if(updateFieldCount == 0) {
 			return null;
 		}
-		StringBuilder sql = new StringBuilder(UPDATE + SPACE).append(entityAnnotationParser.getTableName()).append(SPACE + SET);
-		for (String field : fieldParamMapping.keySet()) {
-			if(!entityAnnotationParser.getFieldMapping().containsKey(field) || field.equals(entityAnnotationParser.getIdField().getName())) {
-				continue;
-			}
-			sql.append(SPACE).append(entityAnnotationParser.getFieldColumnMapping().get(entityAnnotationParser.getFieldMapping().get(field))).append(SPACE + EQ + SPACE).append("#{param2.").append(field).append("}").append(COMMA);
-		}
-		sql.deleteCharAt(sql.length()-1);
+		StringBuilder sql = simpleSqlBuilder.getUpdateAsMapSql(fieldParamMapping);
 		String conditionSql = simpleSqlBuilder.getConditionSql(condition, "param1");
 		if(!conditionSql.isEmpty()) {
 			sql.append(SPACE + WHERE + SPACE).append(conditionSql);
@@ -348,7 +339,7 @@ public class EntityDaoSqlProvider implements SqlComponent {
 		if(ids == null) {
 			ids = new Long[0];
 		}
-		String sql = dialect.getSimpleSqlBuilder(entityClass).getBatchInsertSql(entitys, ids);
+		String sql = simpleSqlBuilder.getBatchInsertSql(entitys, ids);
 		log.debug(sql);
 		return sql;
 	}
@@ -356,39 +347,7 @@ public class EntityDaoSqlProvider implements SqlComponent {
 	public String updates(Map<String, Object> args) {
 		@SuppressWarnings("unchecked")
 		List<Entity> entitys = (List<Entity>)args.get("param1");
-		if(CollectionUtils.isEmpty(entitys)) {
-			return null;
-		}
-		for (Entity entity : entitys) {
-			if(entity.isTransient()) {
-				throw new ExecutorException("The record " + entity + " is transient!");
-			}
-		}
-		String idField = entityAnnotationParser.getIdField().getName();
-		String idColumn = entityAnnotationParser.getFieldColumnMapping().get(entityAnnotationParser.getIdField());
-		StringBuilder sb = new StringBuilder(UPDATE + SPACE).append(entityAnnotationParser.getTableName()).append(SPACE + SET);
-		boolean hasUpdateField = false;
-		for (Entry<Field, String> entry : entityAnnotationParser.getFieldColumnMapping().entrySet()) {
-			String field = entry.getKey().getName();
-			if(field.equals(idField)) {
-				continue;
-			}
-			hasUpdateField = true;
-			sb.append(SPACE).append(entry.getValue()).append(SPACE + EQ + SPACE + CASE + SPACE);
-			for (int i = 0; i < entitys.size(); i++) {
-				sb.append(WHEN + SPACE).append(idColumn).append(SPACE + EQ + SPACE).append("#{param1["+i+"].").append(idField).append("}").append(SPACE + THEN + SPACE).append("#{param1["+i+"].").append(field).append("}").append(SPACE);
-			}
-			sb.append(END + COMMA);
-		}
-		if(hasUpdateField) {
-			sb.deleteCharAt(sb.length()-1);
-		}
-		sb.append(SPACE + WHERE);
-		for (int i = 0; i < entitys.size(); i++) {
-			sb.append(SPACE).append(idColumn).append(SPACE + EQ + SPACE).append("#{param1["+i+"].").append(idField).append("}").append(SPACE + OR);
-		}
-		sb.delete(sb.length()-3, sb.length());
-		String sql = sb.toString();
+		String sql = simpleSqlBuilder.getUpdatesSql(entitys);
 		log.debug(sql);
 		return sql;
 	}

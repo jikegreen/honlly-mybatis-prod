@@ -16,7 +16,7 @@ import com.honlly.mybatis.annotation.Table;
  * @author wangk
  */
 @Table("CUST_MESSAGE_WAIT_SEND")
-//@Sequence("SEQ_CUST_MESSAGE_WAIT_SEND")
+@Sequence("SEQ_CUST_MESSAGE_WAIT_SEND")
 public class MessageWaitSend extends Entity {
 
     /**

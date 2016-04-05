@@ -73,14 +73,14 @@ public class OracleDialect extends Dialect {
 
 	@Override
 	public String getLimitString(String sql, int offset, int limit) {
-		String pagingSql = SELECT + SPACE + "T.*" + COMMA + SPACE + "ROWNUM" + SPACE + AS + SPACE + "ROW_NUM" + 
-				SPACE + FROM + SPACE + LEFT_BRACE + sql + RIGHT_BRACE + SPACE + AS + SPACE + "T" + 
-				WHERE + SPACE + "ROWNUM" + SPACE + LT + SPACE + (offset + limit);
+		String pagingSql = new StringBuilder(SELECT).append(SPACE).append("T.*").append(COMMA).append(SPACE).append("ROWNUM").append(SPACE).append(AS).append(SPACE).append("ROW_NUM").append(SPACE) 
+				 .append(FROM).append(SPACE).append(LEFT_BRACE).append(sql).append(RIGHT_BRACE).append(SPACE).append("T").append(SPACE) 
+				.append(WHERE).append(SPACE).append("ROWNUM").append(SPACE).append(LT).append(SPACE).append(offset + limit).toString();
 		if (offset == 0) {
 			return pagingSql;
 		}
-		return SELECT + SPACE + ASTERISK + SPACE + FROM + SPACE + LEFT_BRACE + pagingSql + RIGHT_BRACE + 
-				SPACE + AS + SPACE + "T_O" + SPACE + WHERE + SPACE + "ROW_NUM" + SPACE + GE + SPACE + offset;
+		return new StringBuilder(SELECT).append(SPACE).append(ASTERISK).append(SPACE).append(FROM).append(SPACE).append(LEFT_BRACE).append(pagingSql).append(RIGHT_BRACE).append(SPACE) 
+				 .append(AS).append(SPACE).append("T_O").append(SPACE).append(WHERE).append(SPACE).append("ROW_NUM").append(SPACE).append(GE).append(SPACE).append(offset).toString();
 	}
 
 	@Override

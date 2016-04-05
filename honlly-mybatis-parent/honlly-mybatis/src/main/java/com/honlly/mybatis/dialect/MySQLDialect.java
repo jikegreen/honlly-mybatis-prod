@@ -77,7 +77,7 @@ public class MySQLDialect extends Dialect {
     
 	@Override
 	public String getLimitString(String sql, int offset, int limit) {
-		return sql + SPACE + "LIMIT" + SPACE + offset + COMMA + SPACE + limit;
+		return new StringBuilder(sql).append(SPACE).append("LIMIT").append(SPACE).append(offset).append(COMMA).append(SPACE).append(limit).toString();
 	}  
 
 	@Override
