@@ -80,7 +80,7 @@ public class OracleDialect extends Dialect {
 			return pagingSql;
 		}
 		return new StringBuilder(SELECT).append(SPACE).append(ASTERISK).append(SPACE).append(FROM).append(SPACE).append(LEFT_BRACE).append(pagingSql).append(RIGHT_BRACE).append(SPACE) 
-				 .append(AS).append(SPACE).append("T_O").append(SPACE).append(WHERE).append(SPACE).append("ROW_NUM").append(SPACE).append(GE).append(SPACE).append(offset).toString();
+				 .append("T_O").append(SPACE).append(WHERE).append(SPACE).append("ROW_NUM").append(SPACE).append(GE).append(SPACE).append(offset).toString();
 	}
 
 	@Override

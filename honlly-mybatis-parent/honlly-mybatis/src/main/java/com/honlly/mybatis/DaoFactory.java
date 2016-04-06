@@ -6,7 +6,13 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionTemplate;
-
+/**
+ * dao工厂
+ * @date 2015年4月6日 上午10:54:01 
+ * @author wangk
+ * @Description:
+ * @project honlly-mybatis
+ */
 public class DaoFactory  {
 	/** sqlSession缓存 */
 	private static final Map<SqlSessionFactory, SqlSession> sqlSessionCache

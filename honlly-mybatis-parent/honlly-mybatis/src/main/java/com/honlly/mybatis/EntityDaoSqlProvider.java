@@ -83,6 +83,12 @@ public class EntityDaoSqlProvider implements SqlComponent {
 	/** SQL语句构建对象 */
 	protected SimpleSqlBuilder<? extends Entity> simpleSqlBuilder;
 	
+	/**
+	 * 初始化sql构造器和方言，利用两边查找法优化查询实体泛型实参的效率
+	 * @Date:2015年9月15日
+	 * @author wangk
+	 * @Description:
+	 */
 	public EntityDaoSqlProvider() {
 		initStackTraceMinIndex();
 		if(entityClass == null) {
@@ -171,7 +177,15 @@ public class EntityDaoSqlProvider implements SqlComponent {
 			}
 		}
 	}
-
+	
+	/**
+	 * 找寻实体类中的泛型实参并缓存
+	 * @Date:2015年4月6日
+	 * @author wangk
+	 * @param className
+	 * @return
+	 * @Description:
+	 */
 	@SuppressWarnings("unchecked")
 	private Class<? extends Entity> parseAndCacheEntityClass(String className) {
 		if(entityClassCache.containsKey(className)) {

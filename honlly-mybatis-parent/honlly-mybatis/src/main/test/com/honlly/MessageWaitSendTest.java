@@ -79,19 +79,19 @@ public class MessageWaitSendTest extends BaseTest {
 	
 	@Test
 	public void getById(){
-		System.out.println(JsonUtil.obj2json(messageWaitSendDao.getById(284L)));
+		System.out.println(JsonUtil.obj2json(messageWaitSendDao.getById(27L)));
 	}
 	
 	@Test
 	public void get(){
 		MessageWaitSend entity = new MessageWaitSend();
-		entity.setId(284L);
+		entity.setId(27L);
 		System.out.println(JsonUtil.obj2json(messageWaitSendDao.get(entity)));
 	}
 	
 	@Test
 	public void deleteById(){
-		messageWaitSendDao.deleteById(284L);
+		messageWaitSendDao.deleteById(2L);
 	}
 	
 	@Test
@@ -103,25 +103,26 @@ public class MessageWaitSendTest extends BaseTest {
 	
 	@Test
 	public void update(){
-		MessageWaitSend entity = messageWaitSendDao.getById(284L);
+		MessageWaitSend entity = messageWaitSendDao.getById(27L);
 		System.out.println("更新前:" + entity.getContent());
 		entity.setContent("大家好，我是update方法的测试内容！！");
 		messageWaitSendDao.update(entity);
-		MessageWaitSend entity1 = messageWaitSendDao.getById(284L);
+		MessageWaitSend entity1 = messageWaitSendDao.getById(27L);
 		System.out.println("更新后:" + entity1.getContent());
 	}
 	
 	@Test
 	public void updateAsMap(){
+		Long id = 26L;
 		MessageWaitSend entity = new MessageWaitSend();
-		entity.setId(290L);
-		MessageWaitSend entity1 = messageWaitSendDao.getById(290L);
+		entity.setId(id);
+		MessageWaitSend entity1 = messageWaitSendDao.getById(id);
 		Map<String, Object> params = new HashMap<>();
 		params.put(MessageWaitSendMeta.content, "updateAsMap - 哈哈,测试,傻白甜！！！");
 		params.put(MessageWaitSendMeta.acceptTime, new Date());
 		System.out.println("更新前:" + entity1.getContent());
 		messageWaitSendDao.updateAsMap(entity,params);
-		MessageWaitSend entity2 = messageWaitSendDao.getById(290L);
+		MessageWaitSend entity2 = messageWaitSendDao.getById(id);
 		System.out.println("更新后:" + entity2.getContent());
 	}
 	
@@ -130,10 +131,15 @@ public class MessageWaitSendTest extends BaseTest {
 		//如果不需要分页，请将第二个参数置为null
 		MessageWaitSend entity = new MessageWaitSend();
 		entity.setContent("哈哈,测试,傻白甜！！！");
-		Pagination pagination = new Pagination(0, 3);
+		Pagination pagination = new Pagination(1, 3);
+		Pagination pagination1 = new Pagination(2, 2);
 		List<MessageWaitSend> messageWaitSends = messageWaitSendDao.query(entity, pagination);
+		List<MessageWaitSend> messageWaitSends1 = messageWaitSendDao.query(entity, pagination1);
 		for (MessageWaitSend messageWaitSend : messageWaitSends) {
 			System.out.println(JsonUtil.obj2json(messageWaitSend));
+		}
+		for (MessageWaitSend messageWaitSend1 : messageWaitSends1) {
+			System.out.println(JsonUtil.obj2json(messageWaitSend1));
 		}
 	}
 	
@@ -147,18 +153,17 @@ public class MessageWaitSendTest extends BaseTest {
 	@Test
 	public void deletes(){
 		List<Long> ids = new ArrayList<>();
-		ids.add(330L);
-		ids.add(341L);
-		ids.add(342L);
+		ids.add(3L);
+		ids.add(4L);
 		messageWaitSendDao.deletes(ids);
 	}
 	
 	@Test
 	public void updates(){
 		List<MessageWaitSend> list = new ArrayList<>();
-		MessageWaitSend entity = messageWaitSendDao.getById(281L);
+		MessageWaitSend entity = messageWaitSendDao.getById(6L);
 		entity.setContent("updates");
-		MessageWaitSend entity1 = messageWaitSendDao.getById(290L);
+		MessageWaitSend entity1 = messageWaitSendDao.getById(7L);
 		entity1.setContent("updates");
 		list.add(entity);
 		list.add(entity1);

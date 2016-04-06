@@ -24,10 +24,19 @@ import com.honlly.mybatis.annotation.Sequence;
 import com.honlly.mybatis.annotation.Table;
 
 public class EntityAnnotationParser {
+	/** 序列默认前缀 **/
 	private static String seq_prefix = "SEQ_";
 	private static final Map<Class<? extends Entity>, EntityAnnotationParser> parserCache 
 			= new ConcurrentHashMap<Class<? extends Entity>, EntityAnnotationParser>();
-
+	
+	/**
+	 * 获取一个实体注解的解析对象
+	 * @Date:2015年4月6日
+	 * @author wangk
+	 * @param entityClass
+	 * @return
+	 * @Description:
+	 */
 	public static EntityAnnotationParser getInstance(Class<? extends Entity> entityClass) {
 		if(entityClass == Entity.class) {
 			return null;
@@ -85,7 +94,15 @@ public class EntityAnnotationParser {
 	public Map<String, Field> getColumnFieldMapping() {
 		return columnFieldMapping;
 	}
-
+	
+	/**
+	 * 解析表名
+	 * @Date:2015年4月6日
+	 * @author wangk
+	 * @param entityClass
+	 * @return
+	 * @Description:
+	 */
 	private String parseTableName(Class<? extends Entity> entityClass) {
 		Table annotation = entityClass.getAnnotation(Table.class);
 		if(annotation == null) {
@@ -98,6 +115,14 @@ public class EntityAnnotationParser {
 		return tableName;
 	}
 	
+	/**
+	 * 解析实体类上的序列注解的内容
+	 * @Date:2015年4月6日
+	 * @author wangk
+	 * @param entityClass
+	 * @return
+	 * @Description:
+	 */
 	private String parseSeqName(Class<? extends Entity> entityClass) {
 		Sequence annotation = entityClass.getAnnotation(Sequence.class);
 		if(annotation == null) {
@@ -109,7 +134,15 @@ public class EntityAnnotationParser {
 		}
 		return seqName;
 	}
-
+	
+	/**
+	 * 存储跟字段相关的一些关联关系（譬如get，set方法，字段上的注解）
+	 * @Date:2015年4月6日
+	 * @author wangk
+	 * @param entityClass
+	 * @return
+	 * @Description:
+	 */
 	private ColumnResult parseColumn(Class<? extends Entity> entityClass) {
 		List<Field> columnFields = getFieldsByAnnotation(entityClass, Column.class);
 		if(CollectionUtils.isEmpty(columnFields)) {
@@ -155,7 +188,15 @@ public class EntityAnnotationParser {
 		}
 		return columnResult;
 	}
-
+	
+	/**
+	 * 检查字段类型
+	 * @Date:2015年4月5日
+	 * @author wangk
+	 * @param entityClass
+	 * @param columnField
+	 * @Description:
+	 */
 	private void checkColumnFieldType(Class<? extends Entity> entityClass, Field columnField) {
 		if(columnField.getGenericType() instanceof ParameterizedType) {
 			throw new ParsingException("Column field " + columnField.getName() + " type error for " +
@@ -198,7 +239,16 @@ public class EntityAnnotationParser {
 		}
 		return sb.toString();
 	}
-
+	
+	/**
+	 * 获取带某个注解的字段的集合
+	 * @Date:2015年4月5日
+	 * @author wangk
+	 * @param clazz
+	 * @param atClass
+	 * @return
+	 * @Description:
+	 */
 	private List<Field> getFieldsByAnnotation(Class<?> clazz, Class<? extends Annotation> atClass) {
 		List<Field> list = ClassUtils.getInstanceFields(clazz);
 		List<Field> ret = new ArrayList<Field>();
