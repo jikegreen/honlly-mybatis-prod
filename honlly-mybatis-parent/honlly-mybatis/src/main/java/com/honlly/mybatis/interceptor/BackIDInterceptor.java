@@ -30,7 +30,7 @@ import com.honlly.mybatis.dialect.OracleDialect;
  */
 public class BackIDInterceptor implements AfterReturningAdvice,MethodBeforeAdvice{
 	private static final Logger LOGGER = Logger.getLogger(BackIDInterceptor.class); 
-	private Class<? extends Entity> clazz = null;
+	private ThreadLocal<Class<? extends Entity>> localClazz = new ThreadLocal<>();
 	
 	@Override
 	public void afterReturning(Object result, Method method, Object[] parameter, Object target) throws Throwable {
@@ -38,51 +38,57 @@ public class BackIDInterceptor implements AfterReturningAdvice,MethodBeforeAdvic
 			LOGGER.error("被切入对象不是EntityDao的子类或它本身，请检查！！！");
 			return;
 		}
-		EntityDao<?> dao = (EntityDao<?>) target;
-		String dialectName = ClassUtils.getActualTypeArguments(EntityDao.class, clazz)[0].isAnnotationPresent(Sequence.class)? "oracle":"mysql";
-		Dialect dialect = new MySQLDialect(); 
-		if("oracle".equalsIgnoreCase(dialectName)){
-			dialect = new OracleDialect();
-		}else if("mysql".equalsIgnoreCase(dialectName)){
-			
-		}else{
-			throw new RuntimeException("数据库:"+dialect+"，暂不支持！！！");
-		}
-		if(method.isAnnotationPresent(InsertProvider.class)){
-			Long cur = getCurrentSeq(dao,dialect);
-			if(parameter.length>1){
-				@SuppressWarnings("unchecked")
-				List<Entity> entities = (List<Entity>) parameter[0];
-				Long[] ids = (Long[]) parameter[1];
-				if(ids.length>0){
-					for (int i = 0; i < ids.length; i++) {
-						entities.get(i).setId(ids[i]);
+		try {
+			EntityDao<?> dao = (EntityDao<?>) target;
+			String dialectName = ClassUtils.getActualTypeArguments(EntityDao.class, localClazz.get())[0].isAnnotationPresent(Sequence.class)? "oracle":"mysql";
+			Dialect dialect = new MySQLDialect(); 
+			if("oracle".equalsIgnoreCase(dialectName)){
+				dialect = new OracleDialect();
+			}else if("mysql".equalsIgnoreCase(dialectName)){
+				
+			}else{
+				throw new RuntimeException("数据库:"+dialect+"，暂不支持！！！");
+			}
+			if(method.isAnnotationPresent(InsertProvider.class)){
+				Long cur = getCurrentSeq(dao,dialect);
+				if(parameter.length>1){
+					@SuppressWarnings("unchecked")
+					List<Entity> entities = (List<Entity>) parameter[0];
+					Long[] ids = (Long[]) parameter[1];
+					if(ids.length>0){
+						for (int i = 0; i < ids.length; i++) {
+							entities.get(i).setId(ids[i]);
+						}
+					}else{
+						dialect.setMultiEntitiesIds(entities, cur);
 					}
 				}else{
-					dialect.setMultiEntitiesIds(entities, cur);
-				}
-			}else{
-				if(parameter[0] instanceof Entity){
-					Entity entity = (Entity) parameter[0];
-					entity.setId(cur);
-				}else if(parameter[0] instanceof Map){
-					@SuppressWarnings("unchecked")
-					Map<String, Object> map = (Map<String, Object>) parameter[0];
-					map.put(IdCol.id, cur);
+					if(parameter[0] instanceof Entity){
+						Entity entity = (Entity) parameter[0];
+						entity.setId(cur);
+					}else if(parameter[0] instanceof Map){
+						@SuppressWarnings("unchecked")
+						Map<String, Object> map = (Map<String, Object>) parameter[0];
+						map.put(IdCol.id, cur);
+					}
 				}
 			}
+		} catch (Exception e) {
+			throw e;
+		} finally {
+			localClazz.remove();
 		}
 	}
 
 	@SuppressWarnings("unchecked")
 	@Override
 	public void before(Method method, Object[] parameter, Object target) throws Throwable {
-		clazz = (Class<? extends Entity>) target.getClass();
+		localClazz.set((Class<? extends Entity>) target.getClass());
 	}
 	
 	@SuppressWarnings("unchecked")
 	private Long getCurrentSeq(EntityDao<?> dao, Dialect dialect){
-		List<Map<String, Object>> result = dao.execute(dialect.getCurrentSeqSql((Class<? extends Entity>)ClassUtils.getActualTypeArguments(EntityDao.class, clazz)[0]));
+		List<Map<String, Object>> result = dao.execute(dialect.getCurrentSeqSql((Class<? extends Entity>)ClassUtils.getActualTypeArguments(EntityDao.class, localClazz.get())[0]));
 		Object currSeq = result.get(0).get("MAXID");
 		return dialect.convertSeq(currSeq);
 	}
