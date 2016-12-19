@@ -2,6 +2,7 @@ package com.honlly.mybatis.utils;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.sql.Timestamp;
 import java.sql.Types;
 import java.util.Collections;
 import java.util.Date;
@@ -37,14 +38,18 @@ public class DbFieldUtils {
 		typeMap.put(Types.BLOB, byte[].class);
 		Map<Class<? extends Serializable>, Integer> classMap = new HashMap<Class<? extends Serializable>, Integer>();
 		classMap.put(String.class, Types.VARCHAR);
+		classMap.put(Character.class, Types.CHAR);
+		classMap.put(Byte.class, Types.TINYINT);
 		classMap.put(BigDecimal.class, Types.NUMERIC);
-		classMap.put(Boolean.class, Types.BIT);
+		classMap.put(Boolean.class, Types.BOOLEAN);
 		classMap.put(Integer.class, Types.INTEGER);
+		classMap.put(Short.class, Types.SMALLINT);
 		classMap.put(Long.class, Types.BIGINT);
-		classMap.put(Float.class, Types.REAL);
+		classMap.put(Float.class, Types.FLOAT);
 		classMap.put(Double.class, Types.DOUBLE);
 		classMap.put(Date.class, Types.DATE);
 		classMap.put(byte[].class, Types.BINARY);
+		classMap.put(Timestamp.class, Types.TIMESTAMP);
 		fieldTypeMapping = Collections.unmodifiableMap(typeMap);
 		fieldClassMapping = Collections.unmodifiableMap(classMap);
 	}
