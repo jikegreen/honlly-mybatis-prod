@@ -79,14 +79,14 @@ public class MessageWaitSendTest extends BaseTest {
 	
 	@Test
 	public void getById(){
-		System.out.println(JsonUtil.obj2json(messageWaitSendDao.getById(27L)));
+		System.out.println(JsonUtil.toJson(messageWaitSendDao.getById(27L)));
 	}
 	
 	@Test
 	public void get(){
 		MessageWaitSend entity = new MessageWaitSend();
 		entity.setId(27L);
-		System.out.println(JsonUtil.obj2json(messageWaitSendDao.get(entity)));
+		System.out.println(JsonUtil.toJson(messageWaitSendDao.get(entity)));
 	}
 	
 	@Test
@@ -136,10 +136,10 @@ public class MessageWaitSendTest extends BaseTest {
 		List<MessageWaitSend> messageWaitSends = messageWaitSendDao.query(entity, pagination);
 		List<MessageWaitSend> messageWaitSends1 = messageWaitSendDao.query(entity, pagination1);
 		for (MessageWaitSend messageWaitSend : messageWaitSends) {
-			System.out.println(JsonUtil.obj2json(messageWaitSend));
+			System.out.println(JsonUtil.toJson(messageWaitSend));
 		}
 		for (MessageWaitSend messageWaitSend1 : messageWaitSends1) {
-			System.out.println(JsonUtil.obj2json(messageWaitSend1));
+			System.out.println(JsonUtil.toJson(messageWaitSend1));
 		}
 	}
 	
