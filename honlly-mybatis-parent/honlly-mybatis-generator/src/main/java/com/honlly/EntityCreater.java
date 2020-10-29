@@ -34,7 +34,7 @@ public class EntityCreater implements InitializingBean {
 	public static final String NOW_DATE = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
 	public static final Map<Integer, String> TYPE_MAPPING;
 	static {
-		Map<Integer, String> map = new HashMap<Integer, String>();
+		Map<Integer, String> map = new HashMap<>();
 		for (Field field : Types.class.getFields()) {
 			if(!Modifier.isStatic(field.getModifiers()) || field.getType() != int.class) {
 				continue;
@@ -64,7 +64,7 @@ public class EntityCreater implements InitializingBean {
 	protected RecordTypeProvider provider;
 	@Autowired
 	protected Config config;
-	private final List<String> IGNORE_TABLE_PREFIX = new ArrayList<String>();
+	private static final List<String> IGNORE_TABLE_PREFIX = new ArrayList<>();
 	/** 默认为mysql **/
 	private String dialect = "mysql";
 	
@@ -204,7 +204,7 @@ public class EntityCreater implements InitializingBean {
 			sb.append(ENTER);
 			sb.append(TAB);
 			sb.append("private ");
-			if(Number.class.isAssignableFrom(fieldType) && (field.equalsIgnoreCase("id") || field.toLowerCase().endsWith("_id"))) {
+			if(Number.class.isAssignableFrom(fieldType) && (field.equalsIgnoreCase("ID") || field.toLowerCase().endsWith("_id"))) {
 				sb.append("Long");
 			} else {
 				sb.append(fieldType.getSimpleName());
@@ -243,11 +243,11 @@ public class EntityCreater implements InitializingBean {
 		sb.append("<mapper namespace=\"" + config.getRootPackage() + ".dao." + type + "." + className + "Dao\">");
 		sb.append(ENTER);
 		sb.append(TAB);
-		sb.append("<resultMap id=\"entityResultMap\" type=\"" + className + "\">");
+		sb.append("<resultMap ID=\"entityResultMap\" type=\"" + className + "\">");
 		sb.append(ENTER);
 		sb.append(TAB);
 		sb.append(TAB);
-		sb.append("<id property=\"id\" column=\"" + IdCol.id + "\" />");
+		sb.append("<ID property=\"ID\" column=\"" + IdCol.ID + "\" />");
 		for (String field : provider.getRecordType(table).getFields()) {
 			if(field.equalsIgnoreCase(provider.getRecordType(table).getIdField())) {
 				continue;

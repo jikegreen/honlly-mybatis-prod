@@ -26,60 +26,60 @@ public interface EntityDao<E extends Entity> {
 	/** 第一个参数名称 */
 	String FIRST_PARAM_NAME = "param1";
 	
-	@SelectProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.method_execute)
+	@SelectProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.METHOD_EXECUTE)
 	@ResultType(Map.class)
 	public List<Map<String, Object>> execute(String sql);
 
-	@SelectProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.method_getById)
+	@SelectProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.METHOD_GET_BY_ID)
 	@ResultMap(ENTITY_RESULT_MAP_ID)
 	public E getById(Long id);
 
-	@SelectProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.method_get)
+	@SelectProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.METHOD_GET)
 	@ResultMap(ENTITY_RESULT_MAP_ID)
 	public E get(E condition);
 
-	@DeleteProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.method_deleteById)
+	@DeleteProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.METHOD_DELETE_BY_ID)
 	public void deleteById(Long id);
 
-	@DeleteProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.method_delete)
+	@DeleteProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.METHOD_DELETE)
 	public void delete(E condition);
 
-	@InsertProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.method_save)
+	@InsertProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.METHOD_SAVE)
 	public void save(E entity);
 
-	@InsertProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.method_saveAsMap)
+	@InsertProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.METHOD_SAVE_AS_MAP)
 	public void saveAsMap(Map<String, Object> fieldParamMapping);
 
-	@InsertProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.method_saveOrUpdate)
+	@InsertProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.METHOD_SAVE_OR_UPDATE)
 	public void saveOrUpdate(E entity);
 
-	@UpdateProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.method_update)
+	@UpdateProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.METHOD_UPDATE)
 	public void update(E entity);
 
-	@UpdateProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.method_updateAsMap)
+	@UpdateProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.METHOD_UPDATE_AS_MAP)
 	public void updateAsMap(E condition, Map<String, Object> fieldParamMapping);
 	
-	@SelectProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.method_query)
+	@SelectProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.METHOD_QUERY)
 	@ResultMap(ENTITY_RESULT_MAP_ID)
 	public List<E> query(E condition, Pagination pagination);
 
-	@SelectProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.method_queryAll)
+	@SelectProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.METHOD_QUERY_ALL)
 	@ResultMap(ENTITY_RESULT_MAP_ID)
 	public List<E> queryAll(Pagination pagination);
 
-	@SelectProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.method_count)
+	@SelectProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.METHOD_COUNT)
 	public int count(E condition);
 	
-	@DeleteProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.method_deletes)
+	@DeleteProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.METHOD_DELETES)
 	public void deletes(@Param(FIRST_PARAM_NAME)List<Long> ids);
 
-	@InsertProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.method_saves)
+	@InsertProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.METHOD_SAVES)
 	public void saves(List<E> entitys, Long... ids);
 
-	@UpdateProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.method_updates)
+	@UpdateProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.METHOD_UPDATES)
 	public void updates(@Param(FIRST_PARAM_NAME)List<E> entitys);
 
-	@UpdateProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.method_saveOrUpdates)
+	@UpdateProvider(type=EntityDaoSqlProvider.class,method=EntityDaoSqlProvider.METHOD_SAVE_OR_UPDATES)
 	public void saveOrUpdates(@Param(FIRST_PARAM_NAME)List<E> entitys);
 
 }

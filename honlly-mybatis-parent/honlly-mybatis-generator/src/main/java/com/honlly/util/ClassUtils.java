@@ -18,7 +18,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class ClassUtils {
 
 	/** 继承类型实际类型参数缓存，key: 原始类型，value.key: 继承类型 */
-	private static final Map<Class<?>, Map<Class<?>, Class<?>[]>> extendActualTypeArgumentsCache = new ConcurrentHashMap<Class<?>, Map<Class<?>, Class<?>[]>>();
+	private static final Map<Class<?>, Map<Class<?>, Class<?>[]>> extendActualTypeArgumentsCache = new ConcurrentHashMap<>();
 	/** 获取方法调用栈元素的方法反射对象 */
 	private static final Method getStackTraceElementMethod;
 	/**
@@ -58,7 +58,7 @@ public class ClassUtils {
 	 * @Description:
 	 */
 	public static List<Field> getInstanceFields(Class<?> clazz) {
-		List<Field> list = new ArrayList<Field>();
+		List<Field> list = new ArrayList<>();
 		for (Field field : clazz.getDeclaredFields()) {
 			if(!java.lang.reflect.Modifier.isStatic(field.getModifiers())) {
 				list.add(field);
@@ -122,21 +122,21 @@ public class ClassUtils {
 		if(actualTypeArgumentsCache != null) {
 			actualTypeArguments = actualTypeArgumentsCache.get(extendType);
 		} else {
-			actualTypeArgumentsCache = new HashMap<Class<?>, Class<?>[]>();
+			actualTypeArgumentsCache = new HashMap<>();
 			extendActualTypeArgumentsCache.put(rawType, actualTypeArgumentsCache);
 		}
 		if(actualTypeArguments != null) {
 			return actualTypeArguments;
 		}
 		actualTypeArguments = new Class<?>[typeParameters.length];
-		List<Type> extendLink = new ArrayList<Type>();
+		List<Type> extendLink = new ArrayList<>();
 		Type itemType = extendType;
 		do {
 			extendLink.add(itemType);
 		} while ((itemType = checkTypeDirectCompatible(rawType, itemType)) != null);
 		extendLink.addAll(getDirectCompatibleExtendLink(rawType, extendLink.remove(extendLink.size()-1)));
 		//key: extendType的参数下标，rawType的参数下标
-		Map<Integer, Integer> indexMapping = new HashMap<Integer, Integer>();
+		Map<Integer, Integer> indexMapping = new HashMap<>();
 		for (int i = 0; i < actualTypeArguments.length; i++) {
 			indexMapping.put(i, i);
 		}
@@ -145,7 +145,7 @@ public class ClassUtils {
 				break;
 			}
 			Type[] params = ((ParameterizedType)extendLink.get(i)).getActualTypeArguments();
-			Map<Integer, Integer> nextIndexMapping = new HashMap<Integer, Integer>();
+			Map<Integer, Integer> nextIndexMapping = new HashMap<>();
 			for (Integer j : indexMapping.keySet()) {
 				Type param = params[j];
 				actualTypeArguments[indexMapping.get(j)] = getRawClass(param);
@@ -207,7 +207,7 @@ public class ClassUtils {
 	 * @Description:
 	 */
 	private static List<Type> getDirectCompatibleExtendLink(Class<?> rawType, Type extendType) {
-		List<Type> extendLink = new ArrayList<Type>();
+		List<Type> extendLink = new ArrayList<>();
 		extendLink.add(extendType);
 		Class<?> extendClass = getRawClass(extendType);
 		if(rawType == extendClass) {

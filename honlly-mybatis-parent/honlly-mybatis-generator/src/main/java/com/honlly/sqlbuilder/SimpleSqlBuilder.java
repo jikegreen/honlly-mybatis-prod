@@ -30,7 +30,7 @@ public abstract class SimpleSqlBuilder<E extends Entity> implements SqlComponent
 	/** 日志对象  */
 	protected final Logger log = Logger.getLogger(getClass());
 	public static final Map<Class<? extends Entity>, SimpleSqlBuilder<? extends Entity>> builderCache 
-			= new ConcurrentHashMap<Class<? extends Entity>, SimpleSqlBuilder<? extends Entity>>();
+			= new ConcurrentHashMap<>();
 
 	/** 实体类类型  */
 	private Class<E> entityClass;
@@ -45,9 +45,9 @@ public abstract class SimpleSqlBuilder<E extends Entity> implements SqlComponent
 	/** 序列 **/
 	private String sequence;
 	/** 实体类属性和数据表字段的映射 */
-	protected Map<String, String> fieldColumnMapping = new HashMap<String, String>();
+	protected Map<String, String> fieldColumnMapping = new HashMap<>();
 	/** 字段和数据库类型的映射 **/
-	protected Map<String, Integer> fieldJdbcTypeMapping = new HashMap<String, Integer>();
+	protected Map<String, Integer> fieldJdbcTypeMapping = new HashMap<>();
 
 	@SuppressWarnings("unchecked")
 	public SimpleSqlBuilder(Class<E> entityClass) {
@@ -189,7 +189,7 @@ public abstract class SimpleSqlBuilder<E extends Entity> implements SqlComponent
 	}
 
 	public Set<String> getSqlFieldSet(Entity entity) {
-		Set<String> fieldSet = new HashSet<String>();
+		Set<String> fieldSet = new HashSet<>();
 		for (Entry<Field, Column> entry : entityAnnotationParser.getFieldAtColumnMapping().entrySet()) {
 			String field = entry.getKey().getName();
 			try {

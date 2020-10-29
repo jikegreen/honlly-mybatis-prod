@@ -29,39 +29,39 @@ public class EntityDaoSqlProvider implements SqlComponent {
 	/**
 	 * 方法名常量，用于EntityDao中的注解
 	 */
-	public static final String method_execute = "execute";
+	public static final String METHOD_EXECUTE = "execute";
 	/** @see #getById(Long) */
-	public static final String method_getById = "getById";
+	public static final String METHOD_GET_BY_ID = "getById";
 	/** @see #get(Map) */
-	public static final String method_get = "get";
+	public static final String METHOD_GET = "get";
 	/** @see #deleteById(Long) */
-	public static final String method_deleteById = "deleteById";
+	public static final String METHOD_DELETE_BY_ID = "deleteById";
 	/** @see #delete(Map) */
-	public static final String method_delete = "delete";
+	public static final String METHOD_DELETE = "delete";
 	/** @see #save(Entity) */
-	public static final String method_save = "save";
+	public static final String METHOD_SAVE = "save";
 	/** @see #saveAsMap(Map) */
-	public static final String method_saveAsMap = "saveAsMap";
+	public static final String METHOD_SAVE_AS_MAP = "saveAsMap";
 	/** @see #saveOrUpdate(Entity) */
-	public static final String method_saveOrUpdate = "saveOrUpdate";
+	public static final String METHOD_SAVE_OR_UPDATE = "saveOrUpdate";
 	/** @see #update(Entity) */
-	public static final String method_update = "update";
+	public static final String METHOD_UPDATE = "update";
 	/** @see #updateAsMap(Map) */
-	public static final String method_updateAsMap = "updateAsMap";
+	public static final String METHOD_UPDATE_AS_MAP = "updateAsMap";
 	/** @see #query(Map) */
-	public static final String method_query = "query";
+	public static final String METHOD_QUERY = "query";
 	/** @see #queryAll(Map) */
-	public static final String method_queryAll = "queryAll";
+	public static final String METHOD_QUERY_ALL = "queryAll";
 	/** @see #count(Map) */
-	public static final String method_count = "count";
+	public static final String METHOD_COUNT = "count";
 	/** @see #deletes(Map) */
-	public static final String method_deletes = "deletes";
+	public static final String METHOD_DELETES = "deletes";
 	/** @see #saves(Map) */
-	public static final String method_saves = "saves";
+	public static final String METHOD_SAVES = "saves";
 	/** @see #updates(Map) */
-	public static final String method_updates = "updates";
+	public static final String METHOD_UPDATES = "updates";
 	/** @see #saveOrUpdates(Map) */
-	public static final String method_saveOrUpdates = "saveOrUpdates";
+	public static final String METHOD_SAVE_OR_UPDATES = "saveOrUpdates";
 	
 	/** log4j对象 */
 	private static final Logger log = Logger.getLogger(EntityDaoSqlProvider.class);
@@ -70,7 +70,7 @@ public class EntityDaoSqlProvider implements SqlComponent {
 	/** 调用栈最大下标 */
 	private static int stackTraceMaxIndex;
 	/** 实体类缓存，key：DAO实现类名称，value：实体类类型  */
-	private static final Map<String, Class<? extends Entity>> entityClassCache = new ConcurrentHashMap<String, Class<? extends Entity>>();
+	private static final Map<String, Class<? extends Entity>> entityClassCache = new ConcurrentHashMap<>();
 	/** 分页SQL语句构建工具类 */
 	protected PagingSqlBuilder pagingSqlBuilder;
 	
@@ -240,7 +240,7 @@ public class EntityDaoSqlProvider implements SqlComponent {
 
 	public String saveAsMap(Map<String, Object> fieldParamMapping) {
 		if(fieldParamMapping == null) {
-			fieldParamMapping = new HashMap<String, Object>();
+			fieldParamMapping = new HashMap<>();
 		}
 		String sql = simpleSqlBuilder.getIncludeIdFieldInsertSql(fieldParamMapping.keySet());
 		log.debug(sql);

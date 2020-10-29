@@ -21,7 +21,7 @@ public class MySQLDialect extends Dialect {
 	/** 数据库类型映射 */
 	private static final Map<String, Integer> dbTypeMapping;
 	static {
-		Map<Integer, String> jdbcMap = new HashMap<Integer, String>();
+		Map<Integer, String> jdbcMap = new HashMap<>();
 		jdbcMap.put(Types.CHAR, "CHAR");
 		jdbcMap.put(Types.VARCHAR, "VARCHAR");
 		jdbcMap.put(Types.LONGVARCHAR, "TEXT");
@@ -42,7 +42,7 @@ public class MySQLDialect extends Dialect {
 		jdbcMap.put(Types.VARBINARY, "VARBINARY");
 		jdbcMap.put(Types.LONGVARBINARY, "VARBINARY");
 		jdbcMap.put(Types.BLOB, "BLOB");
-		Map<String, Integer> dbMap = new LinkedCaseInsensitiveMap<Integer>();
+		Map<String, Integer> dbMap = new LinkedCaseInsensitiveMap<>();
 		dbMap.put("CHAR", Types.CHAR);
 		dbMap.put("VARCHAR", Types.VARCHAR);
 		dbMap.put("TEXT", Types.LONGVARCHAR);

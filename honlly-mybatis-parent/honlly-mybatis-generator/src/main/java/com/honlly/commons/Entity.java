@@ -30,7 +30,7 @@ public class Entity extends BaseBean implements Comparable<Entity> {
 
 	/** 表ID */
 	@Id
-	@Column(IdCol.id)
+	@Column(IdCol.ID)
 	private Long id;
 	
 	public Long getId() {
@@ -86,7 +86,7 @@ public class Entity extends BaseBean implements Comparable<Entity> {
 		if(!getClass().isInstance(other)) {
 			return null;
 		}
-		List<String> differentColumnFields = new ArrayList<String>();
+		List<String> differentColumnFields = new ArrayList<>();
 		for (Field field : EntityAnnotationParser.getInstance(getClass()).getFieldMapping().values()) {
 			Object value = null;
 			Object otherValue = null;

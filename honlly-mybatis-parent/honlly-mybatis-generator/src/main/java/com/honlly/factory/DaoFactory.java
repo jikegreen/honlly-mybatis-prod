@@ -1,16 +1,17 @@
 package com.honlly.factory;
 
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionTemplate;
 
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
 public class DaoFactory  {
+	private DaoFactory(){}
 	/** sqlSession缓存 */
 	private static final Map<SqlSessionFactory, SqlSession> sqlSessionCache
-			= new ConcurrentHashMap<SqlSessionFactory, SqlSession>();
+			= new ConcurrentHashMap<>();
 
 	public static <D> D getDao(SqlSessionFactory sqlSessionFactory, Class<D> daoClass) {
 		return openSession(sqlSessionFactory).getMapper(daoClass);

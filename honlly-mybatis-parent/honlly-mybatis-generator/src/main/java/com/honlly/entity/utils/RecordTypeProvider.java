@@ -22,9 +22,9 @@ public class RecordTypeProvider {
 	
 	private Dialect dialect;
 	/** 表名集合 */
-	private final List<String> talbeNames = new ArrayList<String>();
+	private final List<String> talbeNames = new ArrayList<>();
 	/** 记录类型缓存 */
-	private final Map<String, RecordType> recordTypeCache = new LinkedCaseInsensitiveMap<RecordType>();
+	private final Map<String, RecordType> recordTypeCache = new LinkedCaseInsensitiveMap<>();
 	/** sqlSession工厂对象 */
 	@Autowired
 	private SqlSessionFactory sqlSessionFactory;

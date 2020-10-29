@@ -3,10 +3,9 @@
  */
 package com.honlly.commons.utils;
 
-import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Component;
 
 /**
  * @date 2015年9月8日 下午5:27:17 
@@ -14,8 +13,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * @Description:
  * @project honlly-mybatis
  */
+@Component
 public class ApplicationContextUtil implements ApplicationContextAware {
-	private static ApplicationContext ctx = new ClassPathXmlApplicationContext("spring/*-spring.xml");;
+	private static ApplicationContext ctx;
 
 	/**
 	 * @see org.springframework.context.ApplicationContextAware#setApplicationContext(org.springframework.context.ApplicationContext)
@@ -24,7 +24,7 @@ public class ApplicationContextUtil implements ApplicationContextAware {
 	 * 修改说明：
 	 */
 	@Override
-	public void setApplicationContext(ApplicationContext context) throws BeansException {
+	public void setApplicationContext(ApplicationContext context) {
 		ctx = context;
 	}
 	

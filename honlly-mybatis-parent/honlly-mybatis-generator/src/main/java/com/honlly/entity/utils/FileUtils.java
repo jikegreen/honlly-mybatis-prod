@@ -5,11 +5,12 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class FileUtils {
+	private FileUtils() {}
 	public static void save(String path, String data) {
 		FileWriter out = null;
 		try {
 			File file = new File(path);
-			File dir = new File(path.substring(0, path.lastIndexOf("/")));
+			File dir = new File(path.substring(0, path.lastIndexOf('/')));
 			if(!dir.exists()) {
 				dir.mkdirs();
 			}
@@ -20,7 +21,9 @@ public class FileUtils {
 			throw new RuntimeException(e);
 		} finally {
 			try {
-				out.close();
+				if (out != null) {
+					out.close();
+				}
 			} catch (IOException e) {
 				e.printStackTrace();
 			}

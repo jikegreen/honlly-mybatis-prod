@@ -34,7 +34,7 @@ public abstract class Dialect implements SqlComponent {
 	protected static final Map<Integer, String> mybatisJdbcTypeMapping;
 	
 	static{
-		Map<Integer, String> mybatisJdbcMap = new HashMap<Integer, String>();
+		Map<Integer, String> mybatisJdbcMap = new HashMap<>();
 		mybatisJdbcMap.put(Types.CHAR, "CHAR");
 		mybatisJdbcMap.put(Types.VARCHAR, "VARCHAR");
 		mybatisJdbcMap.put(Types.LONGVARCHAR, "LONGVARCHAR");

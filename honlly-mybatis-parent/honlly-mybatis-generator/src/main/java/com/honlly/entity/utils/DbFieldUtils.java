@@ -11,12 +11,13 @@ import java.util.Map;
 import com.honlly.entity.domain.RecordField;
 
 public class DbFieldUtils {
+	private DbFieldUtils(){}
 	/** 字段类型映射 */
 	private static final Map<Integer, Class<? extends Serializable>> fieldTypeMapping;
 	/** JAVA类型映射 */
 	private static final Map<Class<? extends Serializable>, Integer> fieldClassMapping;
 	static {
-		Map<Integer, Class<? extends Serializable>> typeMap = new HashMap<Integer, Class<? extends Serializable>>();
+		Map<Integer, Class<? extends Serializable>> typeMap = new HashMap<>();
 		typeMap.put(Types.CHAR, String.class);
 		typeMap.put(Types.VARCHAR, String.class);
 		typeMap.put(Types.LONGVARCHAR, String.class);
@@ -37,7 +38,7 @@ public class DbFieldUtils {
 		typeMap.put(Types.VARBINARY, byte[].class);
 		typeMap.put(Types.LONGVARBINARY, byte[].class);
 		typeMap.put(Types.BLOB, byte[].class);
-		Map<Class<? extends Serializable>, Integer> classMap = new HashMap<Class<? extends Serializable>, Integer>();
+		Map<Class<? extends Serializable>, Integer> classMap = new HashMap<>();
 		classMap.put(String.class, Types.VARCHAR);
 		classMap.put(BigDecimal.class, Types.NUMERIC);
 		classMap.put(Boolean.class, Types.BIT);
@@ -85,7 +86,7 @@ public class DbFieldUtils {
 		dbType = dbType.replaceAll("\\)", "").replaceAll("\\,.*$", "");
 		int type = 0;
 		int size = 0;
-		int index = dbType.indexOf("(");
+		int index = dbType.indexOf('(');
 		if(index > 0) {
 			type = field.getDialect().getJdbcType(dbType.substring(0, index));
 			size = Integer.valueOf(dbType.substring(index+1));
